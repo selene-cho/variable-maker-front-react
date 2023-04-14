@@ -1,3 +1,3 @@
 export default function Abbreviation() {
-  return <div></div>;
+  return <div>Abbreviation</div>;
 }

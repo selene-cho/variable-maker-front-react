@@ -1,0 +1,62 @@
+@import '../scss/style.scss';
+
+.container {
+  width: 100%;
+  font: {
+    family: $surroundAir;
+    size: $reg;
+  }
+  margin-top: 50px;
+  .chooseCase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    label {
+      letter-spacing: 1px;
+      font-family: $surround;
+      margin: 0 15px;
+      display: flex;
+      align-items: center;
+      input {
+        margin-right: 10px;
+      }
+      img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        text-align: center;
+        margin-right: 5px;
+      }
+      &:last-child {
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+  }
+  .search {
+    display: flex;
+    border: 3px solid $m1;
+    border-radius: 10px;
+    margin-top: 20px;
+    align-items: center;
+    background-color: white;
+    padding: 10px 0;
+    .icon {
+      font-size: $xxl;
+      margin: 0 30px;
+    }
+    input {
+      font: {
+        family: $surroundAir;
+        size: $md;
+      }
+      padding: 10px 0;
+      width: 100%;
+      &::placeholder {
+        color: $d2;
+      }
+    }
+  }
+}

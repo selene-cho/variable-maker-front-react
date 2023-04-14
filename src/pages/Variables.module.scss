@@ -1,0 +1,62 @@
+@import '../scss/style.scss';
+
+.container {
+  border: 3px solid $m2;
+  border-radius: 10px;
+  height: 450px;
+  background-color: white;
+  position: relative;
+  header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    background-color: $m2;
+    color: $d1;
+    padding: 20px 30px;
+    border-radius: 10px 10px 0 0;
+    font: {
+      family: $surround;
+      size: $lg;
+    }
+    letter-spacing: 2px;
+    .icon {
+      font-size: 2.1875rem;
+    }
+    span {
+      text-decoration: underline;
+      text-underline-position: under; // 너무 붙어있는 밑줄 띄우기
+    }
+  }
+  .result {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    // padding: 20px 30px;
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    color: $d1;
+    font: {
+      family: $surround;
+      size: $xxl;
+    }
+    span {
+      color: $l4;
+    }
+    .arrow {
+      margin: 20px 0;
+      color: $m2;
+    }
+  }
+}
+.toDictionary {
+  display: flex;
+  justify-content: end;
+  margin: 10px 0;
+  font: {
+    size: $reg;
+    family: $surroundAir;
+  }
+}

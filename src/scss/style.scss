@@ -1,7 +1,36 @@
 /* Color */
 
+// Light Mode
+$l1: #fefcf3;
+$l2: #f5ebe0;
+$l3: #f0dbdb;
+$l4: #dba39a;
+
+$m1: #f2d7d9;
+$m2: #d3cedf;
+$m3: #9cb4cc;
+$m4: #748da6;
+
+// Dark Mode
+$d1: #393646;
+$d2: #4f4557;
+$d3: #6d5d6e;
+$d4: #f4eee0;
+
 /* Font */
+$pretendard: 'Pretendard Variable';
+$surround: 'Cafe24Ssurround';
+$surroundAir: 'Cafe24SsurroundAir';
 
 /* Size */
+// 기본 1rem, 16px
+
+$xs: 0.75rem; // 12px
+$sm: 0.875rem; // 14px
+$reg: 1.125rem; // 18px
+$md: 1.25rem; // 20px
+$lg: 1.5rem; // 24px
+$xl: 1.625rem; // 26px
+$xxl: 2rem; // 32px
 
 /* Mixin */

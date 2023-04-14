@@ -1,0 +1,15 @@
+@import '../scss/style.scss';
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  .outlet {
+    width: calc(100vw - 260px);
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    background-color: $l1;
+  }
+}

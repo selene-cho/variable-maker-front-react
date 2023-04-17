@@ -4,8 +4,25 @@ import styles from './Search.module.scss';
 import pascalImg from '../images/Pascal.png';
 import camelImg from '../images/camel.png';
 import snakeImg from '../images/snake.png';
+import { useEffect, useState } from 'react';
+import { getTranslateWord } from '../api/api';
 
 export default function Search() {
+  const [search, setSearch] = useState('');
+  const handleLoad = async (searchQuery) => {
+    const { searchData } = await getTranslateWord(searchQuery);
+    setSearch(searchData);
+  };
+
+  useEffect(() => {
+    handleLoad(search);
+  }, []);
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    setSearch(e.target['search'].value);
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.chooseCase}>
@@ -23,14 +40,18 @@ export default function Search() {
           <img src={pascalImg} alt="pascalImage" /> PascalCase
         </label>
       </div>
-      <div className={styles.search}>
+      <form className={styles.search} onSubmit={handleSearchSubmit}>
         <BsChatSquareText className={styles.icon} />
         <input
           type="search"
+          name="search"
           placeholder="변수명을 입력해주세요. &nbsp; (단어만 입력해주세요)"
         />
-        <FcSearch className={styles.icon} />
-      </div>
+        <button type="submit">
+          <FcSearch className={styles.icon} />
+        </button>
+      </form>
+      <div>{search}</div>
     </div>
   );
 }

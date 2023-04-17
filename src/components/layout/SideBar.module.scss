@@ -10,10 +10,10 @@
   width: 260px;
   height: 100%;
   padding: 1.25rem 0.9375rem;
-  border-right: 3px solid $m1;
+  border-right: 3px solid var(--color-sidebar-border);
   font-family: $surroundAir;
   font-size: $md;
-  background-color: $l4;
+  background-color: var(--color-sidebar);
   color: white;
   .logo {
     align-items: last baseline;
@@ -59,22 +59,28 @@
       border-radius: 5px;
       padding: 5px 15px;
       margin-top: 10px;
-      background-color: $l3;
+      background-color: var(--color-sidebar-search);
       height: 250px;
-      color: $d1;
+      color: var(--color-sidebar-search-text);
       li {
         font-size: $sm;
-        border-bottom: 1px solid $d1;
+        border-bottom: 1px solid var(--color-sidebar-search-border);
       }
     }
   }
   .sectionBottom {
     align-self: baseline;
     width: 100%;
-    border: 1px solid $l3;
+    border: 1px solid var(--color-sidebar-search);
     ul {
       li {
-        border-bottom: 1px solid $l3;
+        border-bottom: 1px solid var(--color-sidebar-search);
+        button > p {
+          display: flex;
+          font-family: $surroundAir;
+          font-size: $md;
+          color: white;
+        }
       }
     }
   }

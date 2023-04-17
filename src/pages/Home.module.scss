@@ -1,3 +1,5 @@
+@import '../scss/style.scss';
+
 .container {
   display: flex;
   flex-direction: column;
@@ -5,4 +7,130 @@
   padding: 4.375rem 8.75rem 5rem;
   width: 100%;
   height: 100%;
+  .variableWrapper {
+    .content {
+      border: 3px solid var(--color-variable-header);
+      border-radius: 10px;
+      height: 450px;
+      background-color: var(--color-text-bg);
+      position: relative;
+      header {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        background-color: var(--color-variable-header);
+        color: var(--color-variable-header-text);
+        padding: 20px 30px;
+        border-radius: 10px 10px 0 0;
+        font: {
+          family: $surround;
+          size: $lg;
+        }
+        letter-spacing: 2px;
+        .icon {
+          font-size: 2.1875rem;
+        }
+        span {
+          text-decoration: underline;
+          text-underline-position: under; // 너무 붙어있는 밑줄 띄우기
+        }
+      }
+      .result {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        // padding: 20px 30px;
+        width: 100%;
+        height: 80%;
+        text-align: center;
+        color: var(--color-variable-text);
+        font: {
+          family: $surround;
+          size: $xxl;
+        }
+        span {
+          color: var(--color-variable-accent);
+        }
+        .arrow {
+          margin: 20px 0;
+          color: var(--color-arrow);
+        }
+      }
+    }
+    .toDictionary {
+      display: flex;
+      justify-content: end;
+      margin: 10px 0;
+      color: var(--color-text);
+      font: {
+        size: $reg;
+        family: $surroundAir;
+      }
+    }
+  }
+
+  .searchWrapper {
+    width: 100%;
+    color: var(--color-text);
+    font: {
+      family: $surroundAir;
+      size: $reg;
+    }
+    margin-top: 50px;
+    .chooseCase {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      label {
+        letter-spacing: 1px;
+        font-family: $surround;
+        margin: 0 15px;
+        display: flex;
+        align-items: center;
+        input {
+          margin-right: 10px;
+        }
+        img {
+          width: 40px;
+          height: 40px;
+          object-fit: cover;
+          text-align: center;
+          margin-right: 5px;
+        }
+        &:last-child {
+          img {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+    }
+    .search {
+      display: flex;
+      border: 3px solid var(--color-search-border);
+      border-radius: 10px;
+      margin-top: 20px;
+      align-items: center;
+      background-color: var(--color-text-bg);
+      padding: 10px 0;
+      .icon {
+        font-size: $xxl;
+        margin: 0 30px;
+      }
+      input {
+        color: var(--color-variable-text);
+        font: {
+          family: $surroundAir;
+          size: $md;
+        }
+        padding: 10px 0;
+        width: 100%;
+        &::placeholder {
+          color: var(--color-variable-text);
+        }
+      }
+    }
+  }
 }

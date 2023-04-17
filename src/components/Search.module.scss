@@ -2,6 +2,7 @@
 
 .container {
   width: 100%;
+  color: var(--color-text);
   font: {
     family: $surroundAir;
     size: $reg;
@@ -37,17 +38,18 @@
   }
   .search {
     display: flex;
-    border: 3px solid $m1;
+    border: 3px solid var(--color-search-border);
     border-radius: 10px;
     margin-top: 20px;
     align-items: center;
-    background-color: white;
+    background-color: var(--color-text-bg);
     padding: 10px 0;
     .icon {
       font-size: $xxl;
       margin: 0 30px;
     }
     input {
+      color: var(--color-variable-text);
       font: {
         family: $surroundAir;
         size: $md;
@@ -55,7 +57,7 @@
       padding: 10px 0;
       width: 100%;
       &::placeholder {
-        color: $d2;
+        color: var(--color-variable-text);
       }
     }
   }

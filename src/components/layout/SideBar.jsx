@@ -10,13 +10,16 @@ import {
   IoTrashOutline,
 } from 'react-icons/io5';
 import { FcIdea, FcKindle, FcLike, FcSurvey } from 'react-icons/fc';
+import { useDarkMode } from '../context/DarkModeContext';
+
 export default function SideBar() {
+  const { darkMode, toggleDarkMode } = useDarkMode();
   return (
     <header className={styles.container}>
       <div className={styles.logo}>LOGO</div>
       <section className={styles.sectionTop}>
         <ul>
-          <Link to="variable" className={styles.Link}>
+          <Link to="/" className={styles.Link}>
             <li>
               <FcIdea className={styles.icon} />
               변수명 추천
@@ -46,14 +49,23 @@ export default function SideBar() {
       <section className={styles.sectionBottom}>
         <ul>
           <li>
-            <IoMoonOutline className={styles.icon} />
-            {/* <BsFillMoonFill className={styles.icon} /> */}
-            Dark Mode
+            <button onClick={toggleDarkMode}>
+              {!darkMode && (
+                <p>
+                  <IoMoonOutline className={styles.icon} />
+                  Dark Mode
+                </p>
+              )}
+              {darkMode && (
+                <p>
+                  <RiSunLine className={styles.icon} />
+                  Light Mode
+                </p>
+              )}
+            </button>
           </li>
-          <li>
-            <RiSunLine className={styles.icon} />
-            Light Mode
-          </li>
+
+          {/* <BsFillMoonFill className={styles.icon} /> */}
           <li>
             <IoTrashOutline className={styles.icon} />
             Reset

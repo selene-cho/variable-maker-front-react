@@ -1,17 +1,17 @@
 @import '../scss/style.scss';
 
 .container {
-  border: 3px solid $m2;
+  border: 3px solid var(--color-variable-header);
   border-radius: 10px;
   height: 450px;
-  background-color: white;
+  background-color: var(--color-text-bg);
   position: relative;
   header {
     display: flex;
     justify-content: space-between;
     text-align: center;
-    background-color: $m2;
-    color: $d1;
+    background-color: var(--color-variable-header);
+    color: var(--color-variable-header-text);
     padding: 20px 30px;
     border-radius: 10px 10px 0 0;
     font: {
@@ -37,13 +37,13 @@
     width: 100%;
     height: 80%;
     text-align: center;
-    color: $d1;
+    color: var(--color-variable-text);
     font: {
       family: $surround;
       size: $xxl;
     }
     span {
-      color: $l4;
+      color: var(--color-variable-accent);
     }
     .arrow {
       margin: 20px 0;
@@ -55,6 +55,7 @@
   display: flex;
   justify-content: end;
   margin: 10px 0;
+  color: var(--color-text);
   font: {
     size: $reg;
     family: $surroundAir;

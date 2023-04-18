@@ -80,7 +80,7 @@ export default function SideBar({ keywords, onDeleteKeyword, onClearHistory }) {
           <li>
             <button onClick={onClearHistory}>
               <IoTrashOutline className={styles.icon} />
-              Reset
+              History Reset
             </button>
           </li>
           <li>

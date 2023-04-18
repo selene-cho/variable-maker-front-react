@@ -16,7 +16,7 @@ import { useOutletContext } from 'react-router-dom';
 export default function Home() {
   const [search, setSearch] = useState(''); // 검색 단어 저장 state
   const [translatedWord, setTranslatedWord] = useState(''); // 번역 단어 저장 state
-  const [keyword, setKeyword] = useState('');
+  // const [keyword, setKeyword] = useState('');
 
   const handleAddKeyword = useOutletContext();
 
@@ -24,6 +24,7 @@ export default function Home() {
     const { translated_variable } = await getTranslateWord(searchQuery);
     // console.log(translated_variable);
     setTranslatedWord(translated_variable);
+    handleAddKeyword(translated_variable);
   };
 
   useEffect(() => {
@@ -33,13 +34,14 @@ export default function Home() {
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     setSearch(e.target['search'].value);
-    handleAddKeyword(keyword);
-    setKeyword('');
+    // handleAddKeyword(translatedWord);
+    // setKeyword('');
+    setTranslatedWord('');
   };
 
-  const handleKeyword = (e) => {
-    setKeyword(e.target.value);
-  };
+  // const handleKeyword = (e) => {
+  //   setKeyword(e.target.value);
+  // };
 
   // const handleEnter = (e) => {
   //   if (keyword && e.keyCode === 13) {
@@ -95,8 +97,8 @@ export default function Home() {
             type="search"
             name="search"
             placeholder="변수명을 입력해주세요. &nbsp; (단어만 입력해주세요)"
-            value={keyword}
-            onChange={handleKeyword}
+            // value={keyword}
+            // onChange={handleKeyword}
             // onKeyDown={handleEnter}
           />
           <button type="submit">

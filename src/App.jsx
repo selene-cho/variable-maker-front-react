@@ -21,7 +21,7 @@ export default function App() {
     console.log('text', text);
     const newKeyword = {
       id: Date.now(),
-      text: text,
+      text,
     };
     setKeywords([newKeyword, ...keywords]);
   };

@@ -1,7 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import SideBar from './components/layout/SideBar';
 import styles from './scss/App.module.scss';
-import DarkModeProvider from './components/context/DarkModeContext';
 import { useEffect, useState } from 'react';
 
 export default function App() {
@@ -39,19 +38,15 @@ export default function App() {
   };
 
   return (
-    <DarkModeProvider>
-      {/** DarkMode context 사용 범위 지정(우산 씌워줌)
-       *  우산 안에 있는 자식 node에서 useDarkMode 사용할 수 있음 (darkModContext)  */}
-      <div className={styles.container}>
-        <SideBar
-          keywords={keywords}
-          onDeleteKeyword={handleDeleteKeyword}
-          onClearHistory={handleClearHistory}
-        />
-        <div className={styles.outlet}>
-          <Outlet context={handleAddKeyword} />
-        </div>
+    <div className={styles.container}>
+      <SideBar
+        keywords={keywords}
+        onDeleteKeyword={handleDeleteKeyword}
+        onClearHistory={handleClearHistory}
+      />
+      <div className={styles.outlet}>
+        <Outlet context={handleAddKeyword} />
       </div>
-    </DarkModeProvider>
+    </div>
   );
 }

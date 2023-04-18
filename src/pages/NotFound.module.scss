@@ -1,0 +1,53 @@
+@import '../scss/style.scss';
+
+.background {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font: {
+    family: $surroundAir;
+    size: $xl;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 10%;
+    img {
+      width: 12.5rem;
+    }
+    .title {
+      display: flex;
+      align-items: center;
+      > img {
+        width: 6.25rem;
+        margin-right: 20px;
+      }
+      > h1 {
+        font-size: $xxl;
+      }
+    }
+    .goHome {
+      display: flex;
+      align-items: flex-start;
+      > img {
+        width: 1.5rem;
+        margin-right: 10px;
+      }
+      .link {
+        color: var(--color-notfound-text);
+        font: {
+          family: $surround;
+        }
+        > span {
+          color: #e57da5;
+        }
+      }
+    }
+  }
+}

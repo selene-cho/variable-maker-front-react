@@ -49,6 +49,7 @@
   --color-variable-accent: #dba39a;
   --color-arrow: #d3cedf;
   --color-search-border: #f2d7d9;
+  --color-notfound-text: rgba(255, 194, 204, 1);
 }
 
 /* UI THEME */
@@ -67,6 +68,7 @@ html.dark {
   --color-variable-accent: #dba39a;
   --color-search-border: #393646;
   --color-arrow: #f2d7d9;
+  --color-notfound-text: #f2d7d9;
 }
 
 /* RESET */

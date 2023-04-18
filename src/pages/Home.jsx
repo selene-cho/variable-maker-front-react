@@ -11,10 +11,14 @@ import snakeImg from '../images/snake.png';
 import { FcSearch } from 'react-icons/fc';
 import { BsChatSquareText } from 'react-icons/bs';
 import { HiOutlineCode } from 'react-icons/hi';
+import { useOutletContext } from 'react-router-dom';
 
 export default function Home() {
   const [search, setSearch] = useState(''); // 검색 단어 저장 state
   const [translatedWord, setTranslatedWord] = useState(''); // 번역 단어 저장 state
+  const [keyword, setKeyword] = useState('');
+
+  const handleAddKeyword = useOutletContext();
 
   const handleLoad = async (searchQuery) => {
     const { translated_variable } = await getTranslateWord(searchQuery);
@@ -29,7 +33,20 @@ export default function Home() {
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     setSearch(e.target['search'].value);
+    handleAddKeyword(keyword);
+    setKeyword('');
   };
+
+  const handleKeyword = (e) => {
+    setKeyword(e.target.value);
+  };
+
+  // const handleEnter = (e) => {
+  //   if (keyword && e.keyCode === 13) {
+  //     handleAddKeyword(keyword);
+  //     setKeyword('');
+  //   }
+  // };
 
   return (
     <div className={styles.container}>
@@ -78,6 +95,9 @@ export default function Home() {
             type="search"
             name="search"
             placeholder="변수명을 입력해주세요. &nbsp; (단어만 입력해주세요)"
+            value={keyword}
+            onChange={handleKeyword}
+            // onKeyDown={handleEnter}
           />
           <button type="submit">
             <FcSearch className={styles.icon} />

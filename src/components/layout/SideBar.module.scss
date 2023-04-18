@@ -63,8 +63,13 @@
       height: 250px;
       color: var(--color-sidebar-search-text);
       li {
+        display: grid;
+        grid-template-columns: 10fr 0.5fr;
         font-size: $sm;
         border-bottom: 1px solid var(--color-sidebar-search-border);
+        button {
+          justify-self: flex-end;
+        }
       }
     }
   }
@@ -75,6 +80,7 @@
     ul {
       li {
         border-bottom: 1px solid var(--color-sidebar-search);
+        button,
         button > p {
           display: flex;
           font-family: $surroundAir;

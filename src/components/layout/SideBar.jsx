@@ -5,6 +5,7 @@ import { RiSunLine } from 'react-icons/ri';
 import {
   IoBulbOutline,
   IoClipboardOutline,
+  IoClose,
   IoMegaphoneOutline,
   IoMoonOutline,
   IoTrashOutline,
@@ -12,8 +13,9 @@ import {
 import { FcIdea, FcKindle, FcLike, FcSurvey } from 'react-icons/fc';
 import { useDarkMode } from '../context/DarkModeContext';
 
-export default function SideBar() {
+export default function SideBar({ keywords, onDeleteKeyword, onClearHistory }) {
   const { darkMode, toggleDarkMode } = useDarkMode();
+  console.log('keywords :', keywords);
   return (
     <header className={styles.container}>
       <div className={styles.logo}>LOGO</div>
@@ -39,11 +41,20 @@ export default function SideBar() {
           최근 검색 기록
         </h1>
         <ul>
-          <li>variable</li>
-          <li>variable</li>
-          <li>variable</li>
-          <li>variable</li>
-          <li>variable</li>
+          {keywords.map(({ id, text }) => {
+            return (
+              <li key={id}>
+                <span>{text}</span>
+                <button
+                  onClick={() => {
+                    onDeleteKeyword(id);
+                  }}
+                >
+                  <IoClose className={styles.deleteIcon} />
+                </button>
+              </li>
+            );
+          })}
         </ul>
       </section>
       <section className={styles.sectionBottom}>
@@ -67,8 +78,10 @@ export default function SideBar() {
 
           {/* <BsFillMoonFill className={styles.icon} /> */}
           <li>
-            <IoTrashOutline className={styles.icon} />
-            Reset
+            <button onClick={onClearHistory}>
+              <IoTrashOutline className={styles.icon} />
+              Reset
+            </button>
           </li>
           <li>
             <IoMegaphoneOutline className={styles.icon} />

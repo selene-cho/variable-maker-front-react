@@ -25,11 +25,8 @@ export default function App() {
     // 중복 검색 기록 CHECK
     for (let arg of keywords) {
       let count = 0;
-      console.log('arg', arg);
       if (arg.text === newKeyword.text) {
-        keywords.slice(count, count + 1);
-
-        // return;
+        keywords.splice(count-1, 1);
       }
       count++;
     }

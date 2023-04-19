@@ -22,10 +22,16 @@ export default function App() {
       id: Date.now(),
       text,
     };
+    // 중복 검색 기록 CHECK
     for (let arg of keywords) {
-      if (arg.text == newKeyword.text) {
-        return;
+      let count = 0;
+      console.log('arg', arg);
+      if (arg.text === newKeyword.text) {
+        keywords.slice(count, count + 1);
+
+        // return;
       }
+      count++;
     }
     setKeywords([newKeyword, ...keywords]);
   };

@@ -26,7 +26,7 @@ export default function App() {
     for (let arg of keywords) {
       let count = 0;
       if (arg.text === newKeyword.text) {
-        keywords.splice(count-1, 1);
+        keywords.splice(count - 1, 1);
       }
       count++;
     }

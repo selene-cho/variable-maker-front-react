@@ -17,14 +17,16 @@ export default function Home() {
   const [search, setSearch] = useState(''); // 검색 단어 저장 state
   const [translatedWord, setTranslatedWord] = useState(''); // 번역 단어 저장 state
   // const [keyword, setKeyword] = useState('');
+  const [wordCount, setWordCount] = useState(0); // 단어별 검색 사용자 수 저장 state
 
   const handleAddKeyword = useOutletContext();
 
   const handleLoad = async (searchQuery) => {
-    const { translated_variable } = await getTranslateWord(searchQuery);
+    const { translated_variable, count } = await getTranslateWord(searchQuery);
     // console.log(translated_variable);
     setTranslatedWord(translated_variable);
     handleAddKeyword(translated_variable);
+    setWordCount(count);
   };
 
   useEffect(() => {
@@ -57,7 +59,7 @@ export default function Home() {
           <header>
             <HiOutlineCode className={styles.icon} />
             <p>
-              이 단어는 <span>100</span>명이 검색했어요 🧐
+              이 단어는 <span>{wordCount}</span>명이 검색했어요 🧐
             </p>
           </header>
           <div className={styles.result}>
@@ -79,15 +81,15 @@ export default function Home() {
         <div className={styles.chooseCase}>
           <p>Type 선택 &nbsp;:</p>
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" name="snakeCase" />
             <img src={snakeImg} alt="snakeImage" /> snake_case
           </label>
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" name="camelCase" />
             <img src={camelImg} alt="camelImage" /> camelCase
           </label>
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" name="pascalCase" />
             <img src={pascalImg} alt="pascalImage" /> PascalCase
           </label>
         </div>

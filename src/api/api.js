@@ -1,3 +1,5 @@
+/* 변수 추천 API */
+
 export async function getTranslateWord(word = '') {
   const query = `word=${word}`;
   const response = await fetch(
@@ -9,3 +11,5 @@ export async function getTranslateWord(word = '') {
   const body = await response.json();
   return body;
 }
+
+/* 약어 추천 API */

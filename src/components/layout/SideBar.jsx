@@ -75,7 +75,6 @@ export default function SideBar({ keywords, onDeleteKeyword, onClearHistory }) {
               )}
             </button>
           </li>
-
           {/* <BsFillMoonFill className={styles.icon} /> */}
           <li>
             <button onClick={onClearHistory}>
@@ -84,8 +83,10 @@ export default function SideBar({ keywords, onDeleteKeyword, onClearHistory }) {
             </button>
           </li>
           <li>
-            <IoMegaphoneOutline className={styles.icon} />
-            Feed Back
+            <button>
+              <IoMegaphoneOutline className={styles.icon} />
+              Feed Back
+            </button>
           </li>
         </ul>
       </section>

@@ -22,7 +22,10 @@ export default function App() {
       id: Date.now(),
       text,
     };
-    setKeywords([newKeyword, ...keywords]);
+    console.log('keywordsText: ', keywords[1]);
+    // if (newKeyword.text === keywords.text) {
+    // }
+    setKeywords([newKeyword, ...keywords[1]]);
   };
 
   // 검색어 삭제

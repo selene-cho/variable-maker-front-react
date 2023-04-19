@@ -61,6 +61,7 @@
       margin-top: 10px;
       background-color: var(--color-sidebar-search);
       height: 250px;
+      overflow-y: scroll;
       color: var(--color-sidebar-search-text);
       li {
         display: grid;

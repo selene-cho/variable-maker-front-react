@@ -24,7 +24,7 @@ export default function App() {
     };
     for (let arg of keywords) {
       if (arg.text == newKeyword.text) {
-        return
+        return;
       }
     }
     setKeywords([newKeyword, ...keywords]);

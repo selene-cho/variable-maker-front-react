@@ -22,9 +22,11 @@ export default function App() {
       id: Date.now(),
       text,
     };
-    console.log('keywordsText: ', keywords[1]);
-    // if (newKeyword.text === keywords.text) {
-    // }
+    for (let arg of keywords) {
+      if (arg.text == newKeyword.text) {
+        return
+      }
+    }
     setKeywords([newKeyword, ...keywords]);
   };
 

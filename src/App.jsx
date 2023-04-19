@@ -25,7 +25,7 @@ export default function App() {
     console.log('keywordsText: ', keywords[1]);
     // if (newKeyword.text === keywords.text) {
     // }
-    setKeywords([newKeyword, ...keywords[1]]);
+    setKeywords([newKeyword, ...keywords]);
   };
 
   // 검색어 삭제

@@ -17,18 +17,18 @@ export default function App() {
 
   // 검색 기록 추가
   const handleAddKeyword = (text) => {
-    console.log('text', text);
+    // console.log('text', text);
     const newKeyword = {
       id: Date.now(),
       text,
     };
     // 중복 검색 기록 CHECK
-    for (let arg of keywords) {
-      let count = 0;
-      if (arg.text === newKeyword.text) {
-        keywords.splice(count - 1, 1);
+    let idx = 0;
+    for (let keyword of keywords) {
+      if (keyword.text === newKeyword.text) {
+        keywords.splice(idx, 1);
       }
-      count++;
+      idx++;
     }
     setKeywords([newKeyword, ...keywords]);
   };

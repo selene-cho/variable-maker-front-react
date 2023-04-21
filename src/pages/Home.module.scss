@@ -57,6 +57,46 @@
           margin: 20px 0;
           color: var(--color-arrow);
         }
+        .changedCase {
+          margin-top: 50px;
+          display: flex;
+          align-items: stretch;
+          // justify-content: space-between;
+          font: {
+            family: $surroundAir;
+            size: $xl;
+          }
+          .case {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 30px;
+            .caseName {
+              height: 40px;
+              display: flex;
+              align-items: center;
+              font: {
+                family: $surround;
+                size: $md;
+              }
+              letter-spacing: 1.5px;
+              > img {
+                width: 30px;
+                height: 30px;
+                object-fit: cover;
+                // text-align: center;
+                margin-right: 10px;
+              }
+              .pascalImg {
+                width: 40px;
+                height: 40px;
+              }
+            }
+            > p {
+              margin-top: 10px;
+            }
+          }
+        }
       }
     }
     .toDictionary {
@@ -83,29 +123,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      label {
-        letter-spacing: 1px;
-        font-family: $surround;
-        margin: 0 15px;
-        display: flex;
-        align-items: center;
-        input {
-          margin-right: 10px;
-        }
-        img {
-          width: 40px;
-          height: 40px;
-          object-fit: cover;
-          text-align: center;
-          margin-right: 5px;
-        }
-        &:last-child {
-          img {
-            width: 50px;
-            height: 50px;
-          }
-        }
-      }
     }
     .search {
       display: flex;

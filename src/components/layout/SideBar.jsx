@@ -15,7 +15,7 @@ import { useDarkMode } from '../context/DarkModeContext';
 
 export default function SideBar({ keywords, onDeleteKeyword, onClearHistory }) {
   const { darkMode, toggleDarkMode } = useDarkMode();
-  console.log('keywords :', keywords);
+  // console.log('keywords :', keywords);
   return (
     <header className={styles.container}>
       <div className={styles.logo}>LOGO</div>

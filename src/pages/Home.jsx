@@ -72,17 +72,15 @@ export default function Home() {
   };
 
   // case별 변수명 변환
-  const changeToPascal = (el) => {
-    let words = el.split(' ');
-    let PascalResult = '';
-    for (let i = 0; i < words.length; i++) {
-      let word = words[i];
-      PascalResult += word.charAt(0).toUpperCase() + word.slice(1);
-    }
-    setPascal(PascalResult);
+  const changeToSnake = (el) => {
+    let words = el.toLowerCase();
+    words = words.replaceAll("'s", '') || words.replaceAll("'", '');
+    let snake_result = words.replaceAll(' ', '_');
+    setSnake(snake_result);
   };
   const changeToCamel = (el) => {
     let words = el.toLowerCase();
+    words = words.replaceAll("'s", '') || words.replaceAll("'", '');
     words = words.split(' ');
     let camelResult = '';
     for (let i = 1; i < words.length; i++) {
@@ -91,10 +89,15 @@ export default function Home() {
     }
     setCamel(words[0] + camelResult);
   };
-  const changeToSnake = (el) => {
-    let words = el.toLowerCase();
-    let snake_result = words.replace(' ', '_');
-    setSnake(snake_result);
+  const changeToPascal = (el) => {
+    let words = el.replaceAll("'s", '') || el.replaceAll("'", '');
+    words = words.split(' ');
+    let PascalResult = '';
+    for (let i = 0; i < words.length; i++) {
+      let word = words[i];
+      PascalResult += word.charAt(0).toUpperCase() + word.slice(1);
+    }
+    setPascal(PascalResult);
   };
 
   //case별 checked여부
@@ -142,9 +145,9 @@ export default function Home() {
               🤓 &nbsp; 추천 변수명은 '&nbsp;
               <span>{translatedWord}</span> ' 입니다.
             </p>
-            {/* {checkbox.checkedSnakeCase ? <p>snake_case : {snake}</p> : null}
-            {checkbox.checkedCamelCase ? <p>camelCase : {camel}</p> : null}
-            {checkbox.checkedPascalCase ? <p>PascalCase : {pascal}</p> : null} */}
+            {/* {checkbox.checkedSnakeCase && <p>snake_case : {snake}</p>}
+            {checkbox.checkedCamelCase && <p>camelCase : {camel}</p>}
+            {checkbox.checkedPascalCase && <p>PascalCase : {pascal}</p>} */}
             <div className={styles.changedCase}>
               <div className={styles.case}>
                 <div className={styles.caseName}>

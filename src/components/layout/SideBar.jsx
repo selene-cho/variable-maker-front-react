@@ -21,13 +21,13 @@ export default function SideBar({ keywords, onDeleteKeyword, onClearHistory }) {
       <div className={styles.logo}>LOGO</div>
       <section className={styles.sectionTop}>
         <ul>
-          <Link to="/" className={styles.Link}>
+          <Link to="/">
             <li>
               <FcIdea className={styles.icon} />
               변수명 추천
             </li>
           </Link>
-          <Link>
+          <Link to="/abbreviation">
             <li>
               <FcIdea className={styles.icon} />
               약어 추천

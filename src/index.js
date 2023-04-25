@@ -4,7 +4,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { RouterProvider } from 'react-router-dom';
 import router from './router';
 import './scss/index.scss';
-import DarkModeProvider from './components/context/DarkModeContext';
+import DarkModeProvider from './contexts/DarkModeContext';
 /**
  * DarkModeProvide
  * DarkMode context 사용 범위 지정(우산 씌워주기)

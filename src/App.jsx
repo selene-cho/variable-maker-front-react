@@ -36,7 +36,7 @@ export default function App() {
   // 검색어 삭제
   const handleDeleteKeyword = (id) => {
     const nextKeyword = keywords.filter((prev) => {
-      return prev.id != id;
+      return prev.id !== id;
     });
     setKeywords(nextKeyword);
   };
@@ -53,7 +53,7 @@ export default function App() {
         onClearHistory={handleClearHistory}
       />
       <div className={styles.outlet}>
-        <Outlet context={handleAddKeyword} />
+        <Outlet context={{handleAddKeyword}} />
       </div>
     </div>
   );

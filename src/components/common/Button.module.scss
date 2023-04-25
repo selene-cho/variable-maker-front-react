@@ -1,8 +1,14 @@
 @import '../../scss/style.scss';
 
-.button {
-  color: white;
-  background-color: $l4;
-  font-size: $lg;
-  padding: 3px;
+.option {
+  border-bottom: 1px solid vat(--color-sidebar-search);
+  > button,
+  > button > p {
+    display: flex;
+    color: white;
+    font: {
+      family: $surroundAir;
+      size: $md;
+    }
+  }
 }

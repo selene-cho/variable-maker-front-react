@@ -1,93 +1,64 @@
-import { Link } from 'react-router-dom';
 import styles from './SideBar.module.scss';
-import { BsFillMoonFill, BsMoon } from 'react-icons/bs';
 import { RiSunLine } from 'react-icons/ri';
 import {
-  IoBulbOutline,
-  IoClipboardOutline,
-  IoClose,
   IoMegaphoneOutline,
   IoMoonOutline,
   IoTrashOutline,
 } from 'react-icons/io5';
-import { FcIdea, FcKindle, FcLike, FcSurvey } from 'react-icons/fc';
-import { useDarkMode } from '../context/DarkModeContext';
+import { FcIdea } from 'react-icons/fc';
+import { useDarkMode } from '../../contexts/DarkModeContext';
+import HistoryList from './HistoryList';
+import Button from '../common/Button';
+import NavItem from '../common/NavItem';
+import { HiOutlineCode } from 'react-icons/hi';
 
 export default function SideBar({ keywords, onDeleteKeyword, onClearHistory }) {
   const { darkMode, toggleDarkMode } = useDarkMode();
-  // console.log('keywords :', keywords);
   return (
     <header className={styles.container}>
-      <div className={styles.logo}>LOGO</div>
-      <section className={styles.sectionTop}>
-        <ul>
-          <Link to="/">
-            <li>
-              <FcIdea className={styles.icon} />
-              변수명 추천
-            </li>
-          </Link>
-          <Link to="/abbreviation">
-            <li>
-              <FcIdea className={styles.icon} />
-              약어 추천
-            </li>
-          </Link>
+      <section className={styles.navLink}>
+        <ul className={styles.navBar}>
+          <NavItem link={'/variable'} className={styles.logo}>
+            <HiOutlineCode className={styles.logoIcon}/>
+            네가 만든 변수명
+          </NavItem>
+          <NavItem link={'/variable'}>
+            <FcIdea className={styles.icon} />
+            변수명 추천
+          </NavItem>
+          <NavItem link={'/abbreviation'}>
+            <FcIdea className={styles.icon} />
+            약어 추천
+          </NavItem>
         </ul>
       </section>
-      <section className={styles.sectionMiddle}>
-        <h1>
-          <FcSurvey className={styles.icon} />
-          최근 검색 기록
-        </h1>
-        <ul>
-          {keywords.map(({ id, text }) => {
-            return (
-              <li key={id}>
-                <span>{text}</span>
-                <button
-                  onClick={() => {
-                    onDeleteKeyword(id);
-                  }}
-                >
-                  <IoClose className={styles.deleteIcon} />
-                </button>
-              </li>
-            );
-          })}
-        </ul>
+      <section className={styles.history}>
+        <HistoryList keywords={keywords} onDeleteKeyword={onDeleteKeyword} />
       </section>
-      <section className={styles.sectionBottom}>
+      <section className={styles.options}>
         <ul>
-          <li>
-            <button onClick={toggleDarkMode}>
-              {!darkMode && (
-                <p>
-                  <IoMoonOutline className={styles.icon} />
-                  Dark Mode
-                </p>
-              )}
-              {darkMode && (
-                <p>
-                  <RiSunLine className={styles.icon} />
-                  Light Mode
-                </p>
-              )}
-            </button>
-          </li>
-          {/* <BsFillMoonFill className={styles.icon} /> */}
-          <li>
-            <button onClick={onClearHistory}>
-              <IoTrashOutline className={styles.icon} />
-              History Reset
-            </button>
-          </li>
-          <li>
-            <button>
-              <IoMegaphoneOutline className={styles.icon} />
-              Feed Back
-            </button>
-          </li>
+          <Button onClick={toggleDarkMode}>
+            {!darkMode && (
+              <p>
+                <IoMoonOutline className={styles.icon} />
+                Dark Mode
+              </p>
+            )}
+            {darkMode && (
+              <p>
+                <RiSunLine className={styles.icon} />
+                Light Mode
+              </p>
+            )}
+          </Button>
+          <Button onClick={onClearHistory}>
+            <IoTrashOutline className={styles.icon} />
+            History Reset
+          </Button>
+          <Button>
+            <IoMegaphoneOutline className={styles.icon} />
+            Feed Back
+          </Button>
         </ul>
       </section>
     </header>

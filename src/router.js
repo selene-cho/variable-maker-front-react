@@ -1,9 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom';
 import App from './App';
 import NotFound from './pages/NotFound';
-import Home from './pages/Home';
-import Variable from './pages/Variable';
-import Abbreviation from './pages/Abbreviation';
+import Variable from './pages/VariablePage/Variable';
+import Abbr from './pages/AbbreviationPage/Abbr';
 
 const router = createBrowserRouter([
   {
@@ -11,9 +10,8 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <NotFound />,
     children: [
-      { index: true, path: '', element: <Home /> },
-      { path: 'variable', element: <Variable /> },
-      { path: 'abbreviation', element: <Abbreviation /> },
+      { index: true, path: 'variable', element: <Variable /> },
+      { path: 'abbreviation', element: <Abbr /> },
     ],
   },
 ]);

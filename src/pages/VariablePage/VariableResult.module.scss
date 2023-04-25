@@ -12,7 +12,7 @@
       justify-content: space-between;
       text-align: center;
       background-color: var(--color-variable-header);
-      color: var(--color-variable-header-text);
+      color: var(--color-header-text);
       padding: 20px 30px;
       border-radius: 10px 10px 0 0;
       font: {
@@ -44,7 +44,7 @@
         size: $xxl;
       }
       span {
-        color: var(--color-variable-accent);
+        color: $l4;
       }
       .arrow {
         margin: 20px 0;

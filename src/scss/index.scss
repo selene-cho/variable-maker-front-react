@@ -36,39 +36,51 @@
 // }
 :root {
   --color-bg: #fefcf3;
+  --color-header-text: #393646;
+  --color-text: black;
+  --color-text-bg: white;
   --color-sidebar: #dba39a;
   --color-sidebar-search: #f0dbdb;
   --color-sidebar-search-text: #393646;
   --color-sidebar-search-border: #dba39a;
   --color-sidebar-border: #f2d7d9;
-  --color-text: black;
-  --color-text-bg: white;
   --color-variable-header: #d3cedf;
-  --color-variable-header-text: #393646;
   --color-variable-text: #4f4557;
-  --color-variable-accent: #dba39a;
-  --color-arrow: #d3cedf;
+  --color-arrow: #555061;
   --color-search-border: #f2d7d9;
   --color-notfound-text: rgba(255, 194, 204, 1);
+  --color-modal-body: #f4eee0;
+  --color-modal-bg: #fefcf3;
+  --color-modal-textarea-border: #f5ebe0;
+  --color-modal-submit-border: #6d5d6e;
+  --color-modal-submit-shadow0: #fefcf3;
+  --color-modal-submit-shadow1: #0001;
+  --color-modal-submit-shadow2: #0002;
 }
 
 /* UI THEME */
 html.dark {
   --color-bg: #24222c;
+  --color-header-text: #d3cedf;
+  --color-text: white;
+  --color-text-bg: #1b191b;
   --color-sidebar: #1b191b;
   --color-sidebar-search: #6d5d6e;
   --color-sidebar-search-text: white;
   --color-sidebar-search-border: #393646;
   --color-sidebar-border: #393646;
-  --color-text: white;
-  --color-text-bg: #1b191b;
   --color-variable-header: #4f4557;
-  --color-variable-header-text: #d3cedf;
   --color-variable-text: #d3cedf;
-  --color-variable-accent: #dba39a;
-  --color-search-border: #393646;
   --color-arrow: #f2d7d9;
+  --color-search-border: #393646;
   --color-notfound-text: #f2d7d9;
+  --color-modal-body: #24222c;
+  --color-modal-bg: #1b191b;
+  --color-modal-textarea-border: #393646;
+  --color-modal-submit-border: #4f4557;
+  --color-modal-submit-shadow0: #2e2c36;
+  --color-modal-submit-shadow1: #0003;
+  --color-modal-submit-shadow2: #0004;
 }
 
 /* RESET */
@@ -101,7 +113,6 @@ textarea {
   background-color: transparent;
   border: 0;
   padding: 0;
-
   &:focus {
     outline: none;
     box-shadow: none;
@@ -111,6 +122,9 @@ textarea {
 a,
 button {
   cursor: pointer;
+  &:hover{
+    cursor: pointer;
+  }
 }
 
 ul,

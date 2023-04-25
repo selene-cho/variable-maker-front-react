@@ -25,3 +25,14 @@ export async function getAbbr(word = '') {
   const body = await response.json();
   return body;
 }
+
+// curl -X POST --data-urlencode
+
+// POST "https://hooks.slack.com/services/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"
+
+// Content-type: application/json
+
+// "payload= {
+//   \"channel\": \"#일반\",
+//   \"text\": \"이 항목은 #개의 일반에 포스트되며 webhookbot이라는 봇에서 제공됩니다.\"
+// }"

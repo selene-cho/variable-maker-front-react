@@ -31,7 +31,6 @@
     }
   }
   .icon {
-    font-weight: bold;
     margin-right: 8px;
   }
 
@@ -44,10 +43,11 @@
         align-items: center;
         padding-top: 0;
         font-family: $surround;
-        .logoIcon {
-          align-items: last baseline;
+        .logo {
+          width: 40px;
+          height: 40px;
           font-size: $xxl;
-          margin-right: 8px;
+          margin-right: 10px;
         }
       }
     }

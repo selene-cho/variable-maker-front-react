@@ -1,7 +1,6 @@
 import styles from './SideBar.module.scss';
 import { RiSunLine } from 'react-icons/ri';
 import {
-  IoMegaphoneOutline,
   IoMoonOutline,
   IoTrashOutline,
 } from 'react-icons/io5';
@@ -10,7 +9,8 @@ import { useDarkMode } from '../../contexts/DarkModeContext';
 import HistoryList from './HistoryList';
 import Button from '../common/Button';
 import NavItem from '../common/NavItem';
-import { HiOutlineCode } from 'react-icons/hi';
+import Feedback from '../../pages/FeedbackPage/Feedback';
+import logoImg from '../../images/logo.png';
 
 export default function SideBar({ keywords, onDeleteKeyword, onClearHistory }) {
   const { darkMode, toggleDarkMode } = useDarkMode();
@@ -19,7 +19,7 @@ export default function SideBar({ keywords, onDeleteKeyword, onClearHistory }) {
       <section className={styles.navLink}>
         <ul className={styles.navBar}>
           <NavItem link={'/variable'} className={styles.logo}>
-            <HiOutlineCode className={styles.logoIcon}/>
+            <img src={logoImg} alt={logoImg} className={styles.logo}/>
             네가 만든 변수명
           </NavItem>
           <NavItem link={'/variable'}>
@@ -55,10 +55,7 @@ export default function SideBar({ keywords, onDeleteKeyword, onClearHistory }) {
             <IoTrashOutline className={styles.icon} />
             History Reset
           </Button>
-          <Button>
-            <IoMegaphoneOutline className={styles.icon} />
-            Feed Back
-          </Button>
+          <Feedback></Feedback>
         </ul>
       </section>
     </header>

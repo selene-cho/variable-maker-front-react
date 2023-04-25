@@ -4,6 +4,9 @@
   display: flex;
   justify-content: center;
   font-size: $md;
+  .icon{
+    margin-right: 8px;
+  }
 }
 .historyList {
   border-radius: 5px;

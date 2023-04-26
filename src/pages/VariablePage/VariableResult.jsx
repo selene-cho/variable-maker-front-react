@@ -92,8 +92,10 @@ export default function VariableResult({ search, word }) {
         </header>
         <div className={styles.result}>
           {loading && (
-            <div>
-              <p>변수명 짓기가 곤란하신가요?!</p>
+            <div className={styles.loading}>
+              <p>
+                <span>변수명 짓기</span>가 곤란하신가요?!
+              </p>
               <p>아래 검색창에</p>
               <p>변수명을 입력해주세요</p>
             </div>

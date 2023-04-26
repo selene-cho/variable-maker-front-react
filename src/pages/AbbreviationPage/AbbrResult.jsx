@@ -58,10 +58,12 @@ export default function AbbrResult({ abbrSearch }) {
         </header>
         <div className={styles.result}>
           {loading && (
-            <div>
+            <div className={styles.loading}>
               <p>변수명이 너무 길다구요?!</p>
               <p>아래 검색창에</p>
-              <p>약어 추천을 원하는 변수명을 입력해주세요</p>
+              <p>
+                <span>약어 추천</span>을 원하는 변수명을 입력해주세요
+              </p>
             </div>
           )}
           {!loading && (

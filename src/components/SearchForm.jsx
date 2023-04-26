@@ -27,6 +27,7 @@ export default function SearchForm({ setSearch, children, placeholder }) {
           placeholder={placeholder}
           value={text}
           onChange={handleText}
+          required
         />
         <button type="submit">
           <FcSearch className={styles.icon} />

@@ -59,6 +59,14 @@
           size: $xl;
         }
       }
+      .loading {
+        > p {
+          margin: 10px 0;
+        }
+        > span {
+          color: $l4;
+        }
+      }
     }
   }
   .toDictionary {

@@ -11,9 +11,10 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <NotFound />,
     children: [
-      { index: true, path: 'variable', element: <Variable /> },
+      { index: true, path: '', element: <Variable /> },
+      { path: 'variable', element: <Variable /> },
       { path: 'abbreviation', element: <Abbr /> },
-      { path: 'feedback', element: <Feedback />}
+      { path: 'feedback', element: <Feedback /> },
     ],
   },
 ]);

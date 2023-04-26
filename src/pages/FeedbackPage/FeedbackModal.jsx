@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styles from './FeedbackModal.module.scss';
 import axios from 'axios';
 
@@ -13,8 +13,8 @@ export default function FeedbackModal() {
     try {
       const data = await axios({
         method: 'POST',
-        url: 'https://cors-anywhere.herokuapp.com/' + SLACK_URL,
-        // url: SLACK_URL,
+        // url: 'https://cors-anywhere.herokuapp.com/' + SLACK_URL,
+        url: SLACK_URL,
         headers: {
           'Content-type': 'application/json',
         },

@@ -1,9 +1,15 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-export default function NavItem({ children, link, className }) {
+// function getLinkStyle({ isActive }) {
+//   return {
+//     textShadow: isActive ? '1px 1px 1px var(--color-link)' : '',
+//   };
+// }
+
+export default function NavItem({ children, link, className, getLinkStyle }) {
   return (
-    <Link to={link}>
+    <NavLink style={getLinkStyle} to={link}>
       <li className={className}>{children}</li>
-    </Link>
+    </NavLink>
   );
 }

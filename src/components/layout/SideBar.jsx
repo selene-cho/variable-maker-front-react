@@ -1,9 +1,6 @@
 import styles from './SideBar.module.scss';
 import { RiSunLine } from 'react-icons/ri';
-import {
-  IoMoonOutline,
-  IoTrashOutline,
-} from 'react-icons/io5';
+import { IoMoonOutline, IoTrashOutline } from 'react-icons/io5';
 import { FcIdea } from 'react-icons/fc';
 import { useDarkMode } from '../../contexts/DarkModeContext';
 import HistoryList from './HistoryList';
@@ -12,21 +9,27 @@ import NavItem from '../common/NavItem';
 import Feedback from '../../pages/FeedbackPage/Feedback';
 import logoImg from '../../images/logo.png';
 
+function getLinkStyle({ isActive }) {
+  return {
+    textShadow: isActive ? '1px 1px 2px var(--color-link)' : '',
+  };
+}
+
 export default function SideBar({ keywords, onDeleteKeyword, onClearHistory }) {
   const { darkMode, toggleDarkMode } = useDarkMode();
   return (
     <header className={styles.container}>
       <section className={styles.navLink}>
         <ul className={styles.navBar}>
-          <NavItem link={'/variable'} className={styles.logo}>
-            <img src={logoImg} alt={logoImg} className={styles.logo}/>
+          <NavItem link={'/'} className={styles.logo}>
+            <img src={logoImg} alt={logoImg} className={styles.logo} />
             네가 만든 변수명
           </NavItem>
-          <NavItem link={'/variable'}>
+          <NavItem link={'/variable'} getLinkStyle={getLinkStyle}>
             <FcIdea className={styles.icon} />
             변수명 추천
           </NavItem>
-          <NavItem link={'/abbreviation'}>
+          <NavItem link={'/abbreviation'} getLinkStyle={getLinkStyle}>
             <FcIdea className={styles.icon} />
             약어 추천
           </NavItem>

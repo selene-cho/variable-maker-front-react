@@ -46,7 +46,7 @@
   --color-sidebar-border: #f2d7d9;
   --color-variable-header: #d3cedf;
   --color-variable-text: #4f4557;
-  --color-arrow: #555061;
+  --color-arrow: #d3cedf;
   --color-search-border: #f2d7d9;
   --color-notfound-text: rgba(255, 194, 204, 1);
   --color-modal-body: #f4eee0;
@@ -122,7 +122,7 @@ textarea {
 a,
 button {
   cursor: pointer;
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
 }

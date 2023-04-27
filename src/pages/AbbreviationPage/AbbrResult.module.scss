@@ -4,7 +4,7 @@
   .content {
     border: 3px solid var(--color-variable-header);
     border-radius: 10px;
-    height: 450px;
+    height: 28.125rem;
     background-color: var(--color-text-bg);
     position: relative;
     header {
@@ -75,6 +75,20 @@
         > span {
           color: $l4;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .abbrWrapper {
+    .content {
+      height: 25rem;
+      header {
+        padding: 15px 25px;
+      }
+      .result {
+        font-size: $xl;
       }
     }
   }

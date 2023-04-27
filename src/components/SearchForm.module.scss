@@ -7,23 +7,18 @@
     family: $surroundAir;
     size: $reg;
   }
-  margin-top: 50px;
-  .chooseCase {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  margin-top: 3.125rem;
   .search {
     display: flex;
     border: 3px solid var(--color-search-border);
-    border-radius: 10px;
-    margin-top: 20px;
+    border-radius: 0.625rem;
+    margin-top: 1.25rem;
     align-items: center;
     background-color: var(--color-text-bg);
-    padding: 10px 0;
+    padding: 0.625rem 0;
     .icon {
       font-size: $xxl;
-      margin: 0 30px;
+      margin: 0 1.875rem;
     }
     input {
       color: var(--color-variable-text);
@@ -31,10 +26,36 @@
         family: $surroundAir;
         size: $md;
       }
-      padding: 10px 0;
+      padding: 0.625rem 0;
       width: 100%;
       &::placeholder {
         color: var(--color-variable-text);
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .searchWrapper {
+    margin-top: 2.5rem;
+    .search {
+      margin-top: 0.625rem;
+      padding: 0.3125rem 0;
+      .icon {
+        font-size: $xl;
+        margin: {
+          left: 1.25rem;
+          right: 0.9375rem;
+        }
+      }
+      input {
+        font-size: $reg;
+      }
+      button > .icon {
+        margin: {
+          left: 5px;
+          right: 13px;
+        }
       }
     }
   }

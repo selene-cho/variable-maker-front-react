@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   font-size: $md;
-  .icon{
+  .icon {
     margin-right: 8px;
   }
 }
@@ -17,12 +17,24 @@
   overflow-y: scroll;
   color: var(--color-sidebar-search-text);
   .historyItem {
-    display: grid;
-    grid-template-columns: 10fr 0.5fr;
+    display: flex;
     font-size: $sm;
     border-bottom: 1px solid var(--color-sidebar-search-border);
+    span {
+      flex: 10 1 auto;
+    }
     .deleteButton {
       justify-self: flex-end;
+      flex: 1 1 auto;
     }
+  }
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: $reg;
+  }
+  .historyList .historyItem {
+    padding: 10px 0;
   }
 }

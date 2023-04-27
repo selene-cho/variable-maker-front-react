@@ -4,7 +4,7 @@
   .content {
     border: 3px solid var(--color-variable-header);
     border-radius: 10px;
-    height: 450px;
+    height: 28.125rem;
     background-color: var(--color-text-bg);
     position: relative;
     header {
@@ -69,14 +69,18 @@
       }
     }
   }
-  .toDictionary {
-    display: flex;
-    justify-content: end;
-    margin: 10px 0;
-    color: var(--color-text);
-    font: {
-      size: $reg;
-      family: $surroundAir;
+}
+
+@media (max-width: 1024px) {
+  .variableWrapper {
+    .content {
+      height: 25rem;
+      header {
+        padding: 15px 25px;
+      }
+      .result {
+        font-size: $xl;
+      }
     }
   }
 }

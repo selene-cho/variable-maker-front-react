@@ -1,0 +1,43 @@
+@import '../../scss/style.scss';
+
+.logo {
+  flex: 0 1 auto;
+  margin: 0;
+  ul .logoBox {
+    display: flex;
+    align-items: center;
+    font-family: $surround;
+    .logoImg {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .logo ul .logoBox {
+    padding-top: 5px;
+    font-size: $md;
+    .logoImg {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .logo ul .logoBox {
+    display: flex;
+    align-items: center;
+    font-family: $surround;
+    font-size: $lg;
+    padding: 5px;
+    .logoImg {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+  }
+}

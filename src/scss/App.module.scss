@@ -13,3 +13,22 @@
     background-color: var(--color-bg);
   }
 }
+
+@media (max-width: 1024px) {
+  .container {
+    .outlet {
+      width: calc(100vw - 230px);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    .outlet {
+      width: 100vw;
+      height: calc(100vh - 80px);
+      bottom: 0;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 @import '../../scss/style.scss';
 
-.feedback{
+.feedback {
   position: absolute;
   width: 50rem;
   height: 33rem;
@@ -12,12 +12,12 @@
   color: var(--color-header-text);
   .title {
     margin: {
-      top:10px;
+      top: 10px;
       bottom: 30px;
     }
     font: {
       family: $surround;
-      size: $xxl
+      size: $xxl;
     }
   }
   .form {
@@ -27,10 +27,6 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    font: {
-      family: $surroundAir;
-      size: $md;
-    }
     .content {
       width: 90%;
       height: 17.5rem;
@@ -49,19 +45,18 @@
     }
     .submit {
       color: var(--color-variable-text);
-      margin: { 
+      margin: {
         top: 30px;
         bottom: 10px;
       }
-      padding: .5rem .9375rem;
+      padding: 0.5rem 0.9375rem;
       border-radius: 8px;
       border: 3px solid var(--color-modal-submit-border);
       transition: box-shadow 300ms ease-in-out;
-      box-shadow:
-      -7px -7px 20px 0px var(--color-modal-submit-shadow0),
-      -4px -4px 5px 0px var(--color-modal-submit-shadow0),
-      7px 7px 20px 0px var(--color-modal-submit-shadow2),
-      4px 4px 5px 0px var(--color-modal-submit-shadow1);
+      box-shadow: -7px -7px 20px 0px var(--color-modal-submit-shadow0),
+        -4px -4px 5px 0px var(--color-modal-submit-shadow0),
+        7px 7px 20px 0px var(--color-modal-submit-shadow2),
+        4px 4px 5px 0px var(--color-modal-submit-shadow1);
       font: {
         family: $surround;
         size: $md;
@@ -69,6 +64,27 @@
       &:hover {
         cursor: pointer;
         box-shadow: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .feedback {
+    width: 40.625rem;
+    height: 28.125rem;
+    .title {
+      font-size: $xl;
+      margin-bottom: 20px;
+    }
+    .form {
+      .content {
+        font-size: $sm;
+        height: 15.625rem;
+      }
+      .submit {
+        margin-top: 20px;
+        font-size: $reg;
       }
     }
   }

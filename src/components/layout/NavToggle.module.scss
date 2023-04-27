@@ -1,0 +1,16 @@
+.navToggle {
+  display: none;
+}
+label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  .menuOn {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}

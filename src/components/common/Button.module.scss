@@ -12,3 +12,12 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .option {
+    > button,
+    > button > p {
+      font-size: $reg;
+    }
+  }
+}

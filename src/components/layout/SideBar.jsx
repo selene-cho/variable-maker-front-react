@@ -7,9 +7,8 @@ import HistoryList from './HistoryList';
 import Button from '../common/Button';
 import NavItem from '../common/NavItem';
 import Feedback from '../../pages/FeedbackPage/Feedback';
-import logoImg from '../../images/logo.png';
 import NavToggle from './NavToggle';
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Logo from '../common/Logo';
 
 function getLinkStyle({ isActive }) {
@@ -23,6 +22,10 @@ export default function SideBar({ keywords, onDeleteKeyword, onClearHistory }) {
   const { darkMode, toggleDarkMode } = useDarkMode();
 
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  useEffect(() => {
+    toggleMenu();
+  }, []);
 
   return (
     <>

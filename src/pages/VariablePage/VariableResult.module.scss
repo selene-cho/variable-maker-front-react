@@ -8,9 +8,8 @@
     background-color: var(--color-text-bg);
     position: relative;
     header {
-      display: flex;
+      @include set-flex-row-center;
       justify-content: space-between;
-      text-align: center;
       background-color: var(--color-variable-header);
       color: var(--color-header-text);
       padding: 20px 30px;
@@ -29,11 +28,9 @@
       }
     }
     .result {
-      display: flex;
-      flex-direction: column;
+      @include set-flex-col-center;
       position: absolute;
       justify-content: center;
-      align-items: center;
       padding: 10px;
       width: 100%;
       height: 80%;
@@ -41,25 +38,79 @@
       color: var(--color-variable-text);
       font: {
         family: $surround;
-        size: $xxl;
+        size: $xl;
       }
       span {
         color: $l4;
       }
-      .arrow {
-        margin: 20px 0;
-        color: var(--color-arrow);
-      }
-      .changedCase {
-        margin-top: 50px;
-        display: flex;
-        align-items: stretch;
-        font: {
-          family: $surroundAir;
-          size: $xl;
+      .variableResult {
+        .question {
+          position: absolute;
+          width: 100%;
+          top: 0;
+          left: 0;
+          margin-top: 30px;
+          margin-bottom: 10px;
+          padding: 0 10px;
+          line-height: 1.5;
+        }
+        .arrow {
+          position: absolute;
+          width: 100%;
+          top: 20%;
+          left: 0;
+          margin: 20px 0;
+          color: var(--color-arrow);
+        }
+        .answer {
+          position: absolute;
+          width: 100%;
+          top: 35%;
+          left: 0;
+          margin-top: 20px;
+          padding: 0 10px;
+          line-height: 1.5;
+        }
+        .cases {
+          margin: {
+            top: 50px;
+            bottom: 5px;
+          }
+          padding: {
+            left: 10px;
+            right: 10px;
+            bottom: 20px;
+          }
+          position: absolute;
+          justify-content: space-between;
+          @include set-flex-row-center;
+          width: 100%;
+          left: 0;
+          bottom: 0;
+          overflow-x: auto;
+          &::-webkit-scrollbar {
+            width: 90%;
+            height: 8px;
+          }
+          &::-webkit-scrollbar-track {
+            background-color: var(--color-scrollbar-track);
+            border-radius: 10px;
+          }
+          &::-webkit-scrollbar-thumb {
+            width: 2px;
+            background: var(--color-scrollbar-thumb);
+            border-radius: 10px;
+          }
+          &::-webkit-scrollbar-button {
+            display: block;
+          }
         }
       }
       .loading {
+        font: {
+          family: $surround;
+          size: $xl;
+        }
         > p {
           margin: 10px 0;
         }
@@ -77,9 +128,33 @@
       height: 25rem;
       header {
         padding: 15px 25px;
+        font-size: $md;
       }
       .result {
-        font-size: $xl;
+        font-size: $lg;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 576px) {
+  .variableWrapper {
+    .content {
+      height: 28.125rem;
+      header {
+        font-size: $reg;
+        .icon {
+          font-size: 1.875rem;
+        }
+      }
+      .result {
+        font-size: $md;
+        .variableResult .cases {
+          padding-bottom: 40px;
+        }
       }
     }
   }

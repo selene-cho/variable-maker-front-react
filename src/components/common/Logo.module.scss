@@ -4,8 +4,7 @@
   flex: 0 1 auto;
   margin: 0;
   ul .logoBox {
-    display: flex;
-    align-items: center;
+    @include set-flex-row-center;
     font-family: $surround;
     .logoImg {
       width: 40px;
@@ -29,8 +28,7 @@
 
 @media (max-width: 768px) {
   .logo ul .logoBox {
-    display: flex;
-    align-items: center;
+    @include set-flex-row-center;
     font-family: $surround;
     font-size: $lg;
     padding: 5px;

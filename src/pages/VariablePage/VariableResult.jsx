@@ -101,16 +101,16 @@ export default function VariableResult({ search, word }) {
             </div>
           )}
           {!loading && (
-            <>
-              <p>
+            <div className={styles.variableResult}>
+              <p className={styles.question}>
                 🤔 &nbsp; '&nbsp;<span>{search}</span> ' 변수명 추천 부탁해!
               </p>
               <TbArrowBigDownLinesFilled className={styles.arrow} />
-              <p>
+              <p className={styles.answer}>
                 🤓 &nbsp; 추천 변수명은 '&nbsp;
                 <span>{translatedWord}</span> ' 입니다.
               </p>
-              <div className={styles.changedCase}>
+              <div className={styles.cases}>
                 <Case caseImg={snakeImg} changedCase={snake}>
                   snake_case
                 </Case>
@@ -121,7 +121,7 @@ export default function VariableResult({ search, word }) {
                   PascalCase
                 </Case>
               </div>
-            </>
+            </div>
           )}
         </div>
       </div>

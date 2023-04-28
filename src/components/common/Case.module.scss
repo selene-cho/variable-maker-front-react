@@ -1,14 +1,11 @@
 @import '../../scss/style.scss';
 
 .caseWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 30px;
+  @include set-flex-col-center;
+  margin: 0 15px;
   .caseName {
     height: 40px;
-    display: flex;
-    align-items: center;
+    @include set-flex-row-center;
     letter-spacing: 1.5px;
     font: {
       family: $surround;
@@ -19,14 +16,37 @@
       height: 30px;
       object-fit: cover;
       margin-right: 10px;
-      &:last-child {
-        width: 40px;
-        height: 40px;
-        margin-right: 3px;
-      }
     }
   }
-  p {
+  &:last-child > .caseName > img {
+    width: 40px;
+    height: 40px;
+    margin-right: 3px;
+  }
+  .changedCase {
     margin-top: 10px;
+    font: {
+      family: $surroundAir;
+      size: $md;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .caseWrapper {
+    margin: 0 10px;
+    .caseName,
+    .changedCase {
+      font-size: $reg;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .caseWrapper {
+    .caseName,
+    .changedCase {
+      font-size: $sm;
+    }
   }
 }

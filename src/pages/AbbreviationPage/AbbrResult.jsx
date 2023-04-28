@@ -67,23 +67,25 @@ export default function AbbrResult({ abbrSearch }) {
             </div>
           )}
           {!loading && (
-            <>
-              <p>
+            <div className={styles.abbrResult}>
+              <p className={styles.question}>
                 🤔 &nbsp; '&nbsp;<span>{abbrSearch}</span> '약어 추천 부탁해!
               </p>
               <TbArrowBigDownLinesFilled className={styles.arrow} />
-              <div className={styles.abbrList}>
+              <div className={styles.answer}>
                 <p>🤓 &nbsp; 추천 약어 LIST</p>
-                {changedAbbr.map((abbr, id) => {
-                  return (
-                    <li className={styles.abbr} key={id}>
-                      <span>{id + 1}.&nbsp;</span>
-                      <p>{abbr}</p>
-                    </li>
-                  );
-                })}
+                <ul className={styles.abbrList}>
+                  {changedAbbr.map((abbr, id) => {
+                    return (
+                      <li className={styles.abbr} key={id}>
+                        <span>{id + 1}.&nbsp;</span>
+                        <p>{abbr}</p>
+                      </li>
+                    );
+                  })}
+                </ul>
               </div>
-            </>
+            </div>
           )}
         </div>
       </div>

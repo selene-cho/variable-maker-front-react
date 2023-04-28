@@ -7,7 +7,7 @@ export default function Case({ changedCase, caseImg, children }) {
         <img src={caseImg} alt={caseImg} />
         <p>{children}</p>
       </div>
-      <p>{changedCase}</p>
+      <p className={styles.changedCase}>{changedCase}</p>
     </div>
   );
 }

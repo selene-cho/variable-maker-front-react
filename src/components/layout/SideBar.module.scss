@@ -71,18 +71,16 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .topNav {
+    @include set-flex-row-center;
+    justify-content: center;
+    position: fixed;
     width: 100vw;
     height: 80px;
-    display: flex;
-    flex-direction: row;
-    position: fixed;
     top: 0;
     left: 0;
     padding: 0.9375rem;
-    align-items: center;
-    justify-content: center;
     font-family: $surroundAir;
     font-size: $md;
     background-color: var(--color-sidebar);

@@ -29,13 +29,25 @@
 @media (max-width: 768px) {
   .logo ul .logoBox {
     @include set-flex-row-center;
-    font-family: $surround;
-    font-size: $lg;
+    font: {
+      family: $surround;
+      size: $lg;
+    }
     padding: 5px;
     .logoImg {
       width: 30px;
       height: 30px;
       margin-right: 10px;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .logo ul .logoBox {
+    font-size: $md;
+    .logoImg {
+      width: 25px;
+      height: 25px;
     }
   }
 }

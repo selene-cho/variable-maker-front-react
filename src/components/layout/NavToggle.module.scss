@@ -14,3 +14,10 @@ label {
     height: 100%;
   }
 }
+
+@media (max-width: 360px) {
+  label {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}

@@ -111,6 +111,7 @@
       z-index: 10;
       overflow-y: auto;
       .sideNav.active {
+        overflow-y: auto;
         left: 0;
         z-index: 11;
         .navToggle {

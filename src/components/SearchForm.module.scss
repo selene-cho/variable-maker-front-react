@@ -19,14 +19,13 @@
       margin: 0 0.9375rem;
     }
   }
-  p {
-  }
   .search {
     @include set-flex-row-center;
     border: 3px solid var(--color-search-border);
     border-radius: 0.625rem;
     background-color: var(--color-text-bg);
     padding: 0.625rem 0;
+    margin-bottom: 1.25rem;
     input {
       color: var(--color-variable-text);
       overflow-x: scroll;

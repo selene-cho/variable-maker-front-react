@@ -153,8 +153,33 @@
       }
       .result {
         font-size: $md;
+        .loading {
+          font-size: $lg;
+        }
         .variableResult .cases {
           padding-bottom: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .variableWrapper {
+    .content {
+      header {
+        font-size: $sm;
+        .icon {
+          font-size: 1.25rem;
+        }
+      }
+      .result {
+        font-size: $reg;
+        .loading {
+          font-size: $md;
+        }
+        .variableResult .cases {
+          padding-bottom: 30px;
         }
       }
     }

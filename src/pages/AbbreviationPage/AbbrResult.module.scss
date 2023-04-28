@@ -155,8 +155,41 @@
       .result {
         font-size: $md;
         height: 90%;
+        .loading {
+          font-size: $lg;
+        }
         .abbrResult {
           padding-bottom: 50px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .abbrWrapper {
+    .content {
+      header {
+        font-size: $sm;
+        .icon {
+          font-size: 1.25rem;
+        }
+      }
+      .result {
+        font-size: $reg;
+        .loading {
+          font-size: $md;
+        }
+        .abbrResult {
+          .question {
+            padding: 0 20px;
+          }
+          .answer .abbrList {
+            margin-top: 1.25rem;
+            .abbr {
+              font-size: $reg;
+            }
+          }
         }
       }
     }

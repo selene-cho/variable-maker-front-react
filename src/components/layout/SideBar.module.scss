@@ -4,12 +4,11 @@
   display: none;
 }
 .container {
-  overflow-y: auto;
   .sideNav {
     display: flex;
     flex-direction: column;
     text-align: center;
-    overflow: scroll;
+    overflow-y: auto;
     position: fixed;
     justify-content: space-between;
     left: 0;
@@ -110,6 +109,7 @@
       height: 100vh;
       background-color: #00000088;
       z-index: 10;
+      overflow-y: auto;
       .sideNav.active {
         left: 0;
         z-index: 11;

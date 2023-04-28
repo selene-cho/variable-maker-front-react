@@ -5,7 +5,7 @@
   width: 100vw;
   height: 100vh;
   position: relative;
-  overflow: auto;
+  overflow-y: auto;
   .outlet {
     width: calc(100vw - 260px);
     height: 100vh;

@@ -4,6 +4,7 @@
   display: none;
 }
 .container {
+  overflow-y: auto;
   .sideNav {
     display: flex;
     flex-direction: column;

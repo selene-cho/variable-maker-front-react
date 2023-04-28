@@ -1,7 +1,9 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import SideBar from './components/layout/SideBar';
 import styles from './scss/App.module.scss';
 import { useEffect, useState } from 'react';
+
+let currentPath = '';
 
 export default function App() {
   // map 사용해서 최근 검색기록 나타내기 위해 string -> object 형태로 변환(parsing)
@@ -45,6 +47,13 @@ export default function App() {
     setKeywords([]);
   };
 
+  let location = useLocation();
+
+  useEffect(() => {
+    if (currentPath === location.pathname) window.location.reload();
+    currentPath = location.pathname;
+  }, [location]);
+
   return (
     <div className={styles.container}>
       <SideBar
@@ -53,7 +62,7 @@ export default function App() {
         onClearHistory={handleClearHistory}
       />
       <div className={styles.outlet}>
-        <Outlet context={{handleAddKeyword}} />
+        <Outlet context={{ handleAddKeyword }} />
       </div>
     </div>
   );

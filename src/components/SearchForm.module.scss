@@ -23,11 +23,11 @@
       color: var(--color-variable-text);
       font: {
         family: $surroundAir;
-        size: $md;
+        size: $reg;
       }
       padding: 0.625rem 0;
       width: 100%;
-      &::placeholder {
+      &:placeholder {
         color: var(--color-variable-text);
       }
     }
@@ -46,9 +46,6 @@
           left: 1.25rem;
           right: 0.9375rem;
         }
-      }
-      input {
-        font-size: $reg;
       }
       button > .icon {
         margin: {

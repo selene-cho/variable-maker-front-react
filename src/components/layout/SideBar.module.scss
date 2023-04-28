@@ -21,7 +21,7 @@
     font-size: $md;
     background-color: var(--color-sidebar);
     color: white;
-    z-index: 1;
+    z-index: 10;
     section {
       margin: 10px 0;
       border-radius: 5px;
@@ -109,10 +109,10 @@
       width: 100vw;
       height: 100vh;
       background-color: #00000088;
-      z-index: 1;
+      z-index: 10;
       .sideNav.active {
         left: 0;
-        z-index: 1;
+        z-index: 11;
         .navToggle {
           display: flex;
           justify-content: end;

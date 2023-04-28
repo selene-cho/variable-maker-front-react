@@ -3,7 +3,12 @@ import styles from './SearchForm.module.scss';
 import { FcSearch } from 'react-icons/fc';
 import { BsChatSquareText } from 'react-icons/bs';
 
-export default function SearchForm({ setSearch, children, placeholder }) {
+export default function SearchForm({
+  setSearch,
+  children,
+  placeholder,
+  label,
+}) {
   const [text, setText] = useState(''); // 검색창 reset 위한 임시 저장 값
 
   // 검색창 단어 임시 저장
@@ -19,9 +24,13 @@ export default function SearchForm({ setSearch, children, placeholder }) {
 
   return (
     <form className={styles.searchWrapper} onSubmit={handleSearchSubmit}>
-      <div className={styles.search}>
+      <label htmlFor={children}>
         <BsChatSquareText className={styles.icon} />
+        {label}
+      </label>
+      <div className={styles.search}>
         <input
+          id={children}
           type="search"
           name={children}
           placeholder={placeholder}

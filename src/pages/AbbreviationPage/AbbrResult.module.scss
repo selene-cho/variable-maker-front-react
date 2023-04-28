@@ -1,6 +1,7 @@
 @import '../../scss/style.scss';
 
 .abbrWrapper {
+  margin: auto 0;
   .content {
     border: 3px solid var(--color-variable-header);
     border-radius: 10px;
@@ -153,7 +154,7 @@
       }
       .result {
         font-size: $md;
-        height: 100%;
+        height: 90%;
         .abbrResult {
           padding-bottom: 50px;
         }

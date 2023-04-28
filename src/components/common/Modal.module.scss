@@ -41,3 +41,17 @@
     height: 28.125rem;
   }
 }
+
+@media (max-width: 768px) {
+  .modalBg .modalBody {
+    width: 37.5rem;
+    height: 25rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .modalBg .modalBody {
+    width: 80%;
+    height: 70%;
+  }
+}

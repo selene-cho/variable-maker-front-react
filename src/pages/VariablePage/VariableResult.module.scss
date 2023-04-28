@@ -1,6 +1,7 @@
 @import '../../scss/style.scss';
 
 .variableWrapper {
+  margin: auto 0;
   .content {
     border: 3px solid var(--color-variable-header);
     border-radius: 10px;

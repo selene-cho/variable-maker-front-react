@@ -69,7 +69,7 @@ export default function AbbrResult({ abbrSearch }) {
           {!loading && (
             <div className={styles.abbrResult}>
               <p className={styles.question}>
-                🤔 &nbsp; '&nbsp;<span>{abbrSearch}</span> '약어 추천 부탁해!
+                🤔 &nbsp; " <span>{abbrSearch}</span> " 약어 추천 부탁해!
               </p>
               <TbArrowBigDownLinesFilled className={styles.arrow} />
               <div className={styles.answer}>

@@ -7,7 +7,7 @@
     family: $surroundAir;
     size: $reg;
   }
-  margin-top: 3.125rem;
+  margin: auto 0;
   .search {
     @include set-flex-row-center;
     border: 3px solid var(--color-search-border);
@@ -36,9 +36,9 @@
 
 @media (max-width: 1024px) {
   .searchWrapper {
-    margin-top: 2.5rem;
+    margin-bottom: 1.25rem;
     .search {
-      margin-top: 0.625rem;
+      margin: 0.625rem 0;
       padding: 0.3125rem 0;
       .icon {
         font-size: $xl;
@@ -61,7 +61,13 @@
 }
 
 @media (max-width: 768px) {
-  .searchWrapper .search input {
-    font-size: $sm;
+  .searchWrapper {
+    margin-bottom: 0;
+    .search {
+      margin: 1.25rem 0;
+      input {
+        font-size: $sm;
+      }
+    }
   }
 }

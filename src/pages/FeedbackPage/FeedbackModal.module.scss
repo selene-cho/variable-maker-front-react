@@ -3,8 +3,7 @@
 .feedback {
   @include set-flex-col-center;
   position: absolute;
-  width: 50rem;
-  height: 33rem;
+  @include set-wh100;
   top: 0;
   left: 0;
   padding: 40px;
@@ -23,9 +22,10 @@
     @include set-flex-col-center;
     @include set-wh100;
     justify-content: center;
+    margin: auto 0;
     .content {
       width: 90%;
-      height: 17.5rem;
+      height: 80%;
       padding: 20px 23px;
       border-radius: 10px;
       border: 3px solid var(--color-modal-textarea-border);
@@ -67,8 +67,6 @@
 
 @media (max-width: 1024px) {
   .feedback {
-    width: 40.625rem;
-    height: 28.125rem;
     .title {
       font-size: $xl;
       margin-bottom: 20px;
@@ -76,8 +74,34 @@
     .form {
       .content {
         font-size: $sm;
-        height: 15.625rem;
       }
+      .submit {
+        margin-top: 20px;
+        font-size: $reg;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .feedback {
+    .title {
+      font-size: $lg;
+      margin-bottom: 10px;
+    }
+    .form {
+      .submit {
+        margin-top: 15px;
+        margin-bottom: 0;
+        font-size: $sm;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .feedback {
+    .form {
       .submit {
         margin-top: 20px;
         font-size: $reg;

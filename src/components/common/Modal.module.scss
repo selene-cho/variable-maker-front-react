@@ -11,7 +11,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 100;
   .modalBody {
     position: absolute;
     padding: 40px;
@@ -29,7 +29,7 @@
       color: rgba(0, 0, 0, 0.7);
       background-color: transparent;
       font-size: $xl;
-      z-index: 11;
+      z-index: 101;
       &:hover {
         color: $l4;
       }

@@ -20,6 +20,7 @@
     font-size: $md;
     background-color: var(--color-sidebar);
     color: white;
+    z-index: 1;
     section {
       margin: 10px 0;
       border-radius: 5px;

@@ -8,7 +8,7 @@ import Button from '../common/Button';
 import NavItem from '../common/NavItem';
 import Feedback from '../../pages/FeedbackPage/Feedback';
 import NavToggle from './NavToggle';
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Logo from '../common/Logo';
 
 function getLinkStyle({ isActive }) {
@@ -18,13 +18,14 @@ function getLinkStyle({ isActive }) {
 }
 
 export default function SideBar({ keywords, onDeleteKeyword, onClearHistory }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const { darkMode, toggleDarkMode } = useDarkMode();
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
   useEffect(() => {
-    toggleMenu();
+    if (menuOpen) return;
+    if (!menuOpen) return toggleMenu();
   }, []);
 
   return (
@@ -35,8 +36,8 @@ export default function SideBar({ keywords, onDeleteKeyword, onClearHistory }) {
         </button>
         <Logo />
       </div>
-      <div className={`${styles.container} ${!isOpen ? styles.active : ''}`}>
-        <nav className={`${styles.sideNav} ${!isOpen ? styles.active : ''}`}>
+      <div className={`${styles.container} ${!menuOpen ? styles.active : ''}`}>
+        <nav className={`${styles.sideNav} ${!menuOpen ? styles.active : ''}`}>
           <button className={styles.navToggle} onClick={toggleMenu}>
             <IoClose className={styles.menuOff} />
           </button>
@@ -79,7 +80,7 @@ export default function SideBar({ keywords, onDeleteKeyword, onClearHistory }) {
                 <IoTrashOutline className={styles.icon} />
                 History Reset
               </Button>
-              <Feedback></Feedback>
+              <Feedback />
             </ul>
           </section>
         </nav>

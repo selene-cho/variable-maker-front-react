@@ -20,7 +20,7 @@ export default function HistoryList({ keywords, onDeleteKeyword }) {
                   onDeleteKeyword(id);
                 }}
               >
-                <IoClose />
+                <IoClose className={styles.icon} />
               </button>
             </li>
           );

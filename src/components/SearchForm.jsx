@@ -31,7 +31,7 @@ export default function SearchForm({
       <div className={styles.search}>
         <input
           id={children}
-          type="search"
+          type="text"
           name={children}
           placeholder={placeholder}
           value={text}

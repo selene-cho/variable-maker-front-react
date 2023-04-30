@@ -6,7 +6,7 @@ import styles from './Abbr.module.scss';
 export default function Abbr() {
   const [abbrSearch, setAbbrSearch] = useState(''); // 약어 추천 변수명 검색수
   const label = '줄이고 싶은 변수명을 입력해주세요.';
-  const placeholder = "'영어 단어'  ex) variable";
+  const placeholder = "'영어 or 한글' 변수명";
   return (
     <div className={styles.container}>
       <AbbrResult abbrSearch={abbrSearch} />

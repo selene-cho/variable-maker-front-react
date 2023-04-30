@@ -165,7 +165,6 @@
       .result {
         font-size: $md;
         height: 90%;
-
         .loading {
           font-size: $lg;
         }
@@ -190,6 +189,7 @@
         }
       }
       .result {
+        height: 100%;
         font-size: $reg;
         .loading {
           font-size: $md;
@@ -222,8 +222,20 @@
         font-size: 0.9375rem;
       }
     }
-    .result .loading {
+    .result {
       font-size: $sm;
+      .loading {
+        font-size: $sm;
+      }
+      .abbrResult {
+        padding-top: 1.25rem;
+        .answer .abbrList {
+          margin: 0.625rem;
+          .abbr {
+            font-size: $sm;
+          }
+        }
+      }
     }
   }
 }

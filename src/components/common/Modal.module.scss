@@ -55,3 +55,11 @@
     height: 70%;
   }
 }
+
+@media (max-width: 375px) {
+  .modalBg .modalBody .closeBtn {
+    top: 15px;
+    right: 15px;
+    font-size: $sm;
+  }
+}

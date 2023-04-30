@@ -189,7 +189,6 @@
         }
       }
       .result {
-        height: 100%;
         font-size: $reg;
         .loading {
           font-size: $md;
@@ -228,7 +227,7 @@
         font-size: $sm;
       }
       .abbrResult {
-        padding-top: 1.25rem;
+        padding: 1.875rem 0;
         .answer .abbrList {
           margin: 0.625rem;
           .abbr {

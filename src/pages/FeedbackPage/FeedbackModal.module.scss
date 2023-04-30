@@ -101,10 +101,35 @@
 
 @media (max-width: 650px) {
   .feedback {
+    padding: 0.9375rem 0.625rem;
+    .title {
+      margin-top: 1.25rem;
+      font-size: $md;
+    }
     .form {
+      .content {
+        font-size: $xs;
+      }
       .submit {
+        border: 2.5px solid var(--color-modal-submit-border);
         margin-top: 20px;
-        font-size: $reg;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .feedback {
+    padding: 0.9375rem 0.625rem;
+    .form {
+      .content {
+        padding: 10px 13px;
+        font-size: $xxs;
+      }
+      .submit {
+        border: 2px solid var(--color-modal-submit-border);
+        margin-top: 0.9375rem;
+        font-size: $xs;
       }
     }
   }

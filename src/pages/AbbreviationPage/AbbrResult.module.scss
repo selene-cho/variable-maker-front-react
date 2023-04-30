@@ -32,6 +32,7 @@
     .result {
       @include set-flex-col-center;
       position: absolute;
+      justify-content: center;
       padding: 10px;
       width: 100%;
       height: 80%;
@@ -196,6 +197,9 @@
         .abbrResult {
           .question {
             padding: 0 20px;
+          }
+          .arrow {
+            width: 20px;
           }
           .answer .abbrList {
             margin-top: 1.25rem;

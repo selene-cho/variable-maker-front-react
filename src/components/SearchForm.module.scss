@@ -81,3 +81,12 @@
     }
   }
 }
+
+@media (max-width: 375px) {
+  .searchWrapper {
+    font-size: $xs;
+    .search input {
+      font-size: $xs;
+    }
+  }
+}

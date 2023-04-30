@@ -212,3 +212,18 @@
     }
   }
 }
+
+@media (max-width: 375px) {
+  .abbrWrapper .content {
+    height: 25rem;
+    header {
+      font-size: $xs;
+      .icon {
+        font-size: 0.9375rem;
+      }
+    }
+    .result .loading {
+      font-size: $sm;
+    }
+  }
+}

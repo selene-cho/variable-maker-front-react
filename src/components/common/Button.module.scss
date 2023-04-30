@@ -21,3 +21,12 @@
     }
   }
 }
+
+@media (max-width: 375px) {
+  .option {
+    > button,
+    > button > p {
+      font-size: $sm;
+    }
+  }
+}

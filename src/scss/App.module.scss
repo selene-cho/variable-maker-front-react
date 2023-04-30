@@ -34,3 +34,9 @@
     }
   }
 }
+
+@media (max-width: 375px) {
+  .container .outlet {
+    height: calc(100vh - 70px);
+  }
+}

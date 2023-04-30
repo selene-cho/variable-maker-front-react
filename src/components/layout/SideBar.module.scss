@@ -90,7 +90,6 @@
       bottom: 3px solid var(--color-sidebar-border);
     }
     .navToggle {
-      // flex: 1 9 auto;
       position: absolute;
       align-items: center;
       left: 0;
@@ -123,6 +122,25 @@
         .logo {
           display: none;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .topNav {
+    height: 70px;
+  }
+  .container.active .sideNav.active {
+    width: 200px;
+    padding: 0.9375rem 0.625rem;
+    font-size: $sm;
+    .navToggle {
+      font-size: $md;
+    }
+    section > ul {
+      li {
+        padding: 10px 0;
       }
     }
   }

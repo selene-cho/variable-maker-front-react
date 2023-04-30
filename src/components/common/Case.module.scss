@@ -50,3 +50,26 @@
     }
   }
 }
+
+@media (max-width: 375px) {
+  .caseWrapper {
+    margin: 0 8px;
+    .caseName {
+      font-size: $xs;
+      img {
+        width: 20px;
+        height: 20px;
+        object-fit: cover;
+        margin-right: 10px;
+      }
+    }
+    .changedCase {
+      font-size: $xs;
+    }
+    &:last-child > .caseName > img {
+      width: 30px;
+      height: 30px;
+      margin-right: 3px;
+    }
+  }
+}

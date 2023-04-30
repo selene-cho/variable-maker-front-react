@@ -186,3 +186,26 @@
     }
   }
 }
+
+@media (max-width: 375px) {
+  .variableWrapper .content {
+    height: 25rem;
+    header {
+      font-size: $xs;
+      .icon {
+        font-size: 0.9375rem;
+      }
+    }
+    .result {
+      font-size: $sm;
+      .loading {
+        font-size: $sm;
+      }
+      .variableResult {
+        .arrow {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}

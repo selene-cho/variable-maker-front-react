@@ -1,0 +1,36 @@
+@import '../../scss/style.scss';
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  margin: 10px 0;
+  .link {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    font-family: $surroundAir;
+    .sns {
+      font-size: $lg;
+      margin-right: 15px;
+    }
+  }
+}
+.kakao {
+  background-color: rgba(253, 236, 168, 0.526);
+  border: 1.5px solid rgb(249, 221, 109);
+  .sns {
+    color: rgb(68, 32, 32);
+  }
+  &:hover {
+    background-color: rgba(255, 231, 135, 0.904);
+  }
+}
+.google {
+  background-color: rgba(186, 210, 247, 0.519);
+  border: 1.5px solid rgb(160, 186, 229);
+  &:hover {
+    background-color: rgba(183, 209, 255, 0.714);
+  }
+}

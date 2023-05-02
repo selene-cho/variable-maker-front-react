@@ -1,0 +1,70 @@
+@import '../../scss/style.scss';
+
+.container {
+  @include set-flex-col-center;
+  width: 100vw;
+  height: 100vh;
+  padding: 3%;
+  background-color: var(--color-modal-body);
+  justify-content: center;
+  .logo {
+    margin: 1.25rem 0;
+    font-size: $xxl;
+    color: var(--color-header-text);
+  }
+  .formWrapper {
+    width: 50%;
+    height: 60%;
+    max-width: 400px;
+    margin-top: 2%;
+    padding: 3%;
+    border: 2px solid var(--color-modal-textarea-border);
+    border-radius: 10px;
+    background-color: var(--color-modal-bg);
+    .form {
+      font-family: $surroundAir;
+      .inputBox {
+        display: flex;
+        margin: 20px;
+        align-items: center;
+        .icon {
+          margin-right: 20px;
+          font-size: $xxl;
+          color: var(--color-variable-text);
+        }
+        input {
+          font-family: $surroundAir;
+          width: 300px;
+          height: 40px;
+          background-color: white;
+          border-radius: 5px;
+          border: 1px solid var(--color-modal-textarea-border);
+          padding: 10px;
+        }
+      }
+    }
+    .divider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 400px;
+      margin: 40px 0;
+      div {
+        width: 40%;
+        border-bottom: 1px solid var(--color-sidebar-scroll-track);
+      }
+      span {
+        margin: 0 20px;
+        font-size: $sm;
+        color: var(--color-variable-text);
+      }
+    }
+    .socialLogin {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      justify-content: center;
+      width: 80%;
+    }
+  }
+}

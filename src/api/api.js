@@ -1,5 +1,7 @@
-/* 변수 추천 API */
+import axios from 'axios';
+import Cookies from 'js-cookie';
 
+/* 변수 추천 API */
 export async function getTranslateWord(word = '') {
   const query = `word=${word}`;
   const response = await fetch(
@@ -26,13 +28,50 @@ export async function getAbbr(word = '') {
   return body;
 }
 
-// curl -X POST --data-urlencode
+const instance = axios.create({
+  baseURL: 'http://223.130.128.91/api/v1',
+  headers: { withCredentials: true },
+});
 
-// POST "https://hooks.slack.com/services/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"
+/* 회원 기본정보 - GET */
+export const getMyInfo = () =>
+  instance.get('users/myinfo/').then((res) => res.data);
 
-// Content-type: application/json
+/* 일반 로그인 - POST */
+export const usernameLogIn = ({ username, password }) =>
+  instance
+    .post(
+      'users/login/',
+      { username, password },
+      {
+        headers: {
+          'X-CSRFToken': Cookies.get('csrftoken') || '',
+        },
+      }
+    )
+    .then((res) => res.data);
 
-// "payload= {
-//   \"channel\": \"#일반\",
-//   \"text\": \"이 항목은 #개의 일반에 포스트되며 webhookbot이라는 봇에서 제공됩니다.\"
-// }"
+/* 로그아웃 - POST */
+export const logOut = () =>
+  instance
+    .post('users/logout/', null, {
+      headers: {
+        'X-CSRFToken': Cookies.get('csrftoken') || '',
+      },
+    })
+    .then((res) => res.data);
+
+/* KAKAO 로그인 - POST */
+
+export const kakaoLogin = (code) =>
+  instance
+    .post(
+      'users/kakao/',
+      { code },
+      {
+        headers: {
+          'X-CSRFToken': Cookies.get('csrftoken') || '',
+        },
+      }
+    )
+    .then((res) => res.status);

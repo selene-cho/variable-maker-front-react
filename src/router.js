@@ -4,6 +4,9 @@ import NotFound from './pages/NotFound';
 import Variable from './pages/VariablePage/Variable';
 import Abbr from './pages/AbbreviationPage/Abbr';
 import Feedback from './pages/FeedbackPage/Feedback';
+import KakaoLogin from './components/auth/KakaoLogin';
+import GoogleLogin from './components/auth/GoogleLogin';
+import Login from './components/auth/Login';
 
 const router = createBrowserRouter([
   {
@@ -15,6 +18,14 @@ const router = createBrowserRouter([
       { path: 'variable', element: <Variable /> },
       { path: 'abbreviation', element: <Abbr /> },
       { path: 'feedback', element: <Feedback /> },
+    ],
+  },
+  {
+    path: '/auth',
+    children: [
+      { path: 'login', element: <Login /> },
+      { path: 'kakao', element: <KakaoLogin /> },
+      { path: 'google', element: <GoogleLogin /> },
     ],
   },
 ]);

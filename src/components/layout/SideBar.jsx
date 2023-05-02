@@ -10,6 +10,7 @@ import Feedback from '../../pages/FeedbackPage/Feedback';
 import NavToggle from './NavToggle';
 import { useEffect, useState } from 'react';
 import Logo from '../common/Logo';
+import { Link } from 'react-router-dom';
 
 function getLinkStyle({ isActive }) {
   return {
@@ -83,6 +84,13 @@ export default function SideBar({ keywords, onDeleteKeyword, onClearHistory }) {
               <Feedback />
             </ul>
           </section>
+          {/* <section className={styles.login}>
+            <ul>
+              <Button>
+                <Link to="auth/login">로그인 / 회원가입</Link>
+              </Button>
+            </ul>
+          </section> */}
         </nav>
       </div>
     </>

@@ -9,7 +9,7 @@
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.697);
-  z-index: 100;
+  z-index: 1000;
   .modalBody {
     position: absolute;
     padding: 40px;
@@ -27,7 +27,7 @@
       color: rgba(0, 0, 0, 0.7);
       background-color: transparent;
       font-size: $xl;
-      z-index: 101;
+      z-index: 1001;
       &:hover {
         color: $l4;
       }

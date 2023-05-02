@@ -33,6 +33,7 @@ export default function FeedbackModal() {
             },
           ],
         },
+        withCredentials: true,
       });
       return data;
     } catch (err) {

@@ -1,6 +1,8 @@
 {
   "name": "rocket-dan",
   "version": "0.1.0",
+  "description": "variable and abbreviation maker for developer",
+  "author": "selene-cho",
   "private": true,
   "dependencies": {
     "@tanstack/react-query": "^4.28.0",
@@ -8,6 +10,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.3.6",
+    "js-cookie": "^3.0.5",
     "node-sass": "^7.0.3",
     "prettier": "^2.8.8",
     "react": "^18.2.0",

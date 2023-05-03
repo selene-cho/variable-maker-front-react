@@ -1,6 +1,6 @@
 import styles from './AboutUs.module.scss';
 import yoontaeImg from '../../images/lyt.jpeg';
-import daheeImg from '../../images/cdh2.jpg';
+import daheeImg from '../../images/cdh.jpg';
 import royImg from '../../images/roy.webp';
 import Profile from './Profile';
 

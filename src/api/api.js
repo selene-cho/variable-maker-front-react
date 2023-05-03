@@ -1,8 +1,8 @@
 import axios from 'axios';
 import Cookies from 'js-cookie';
 
-// const host =
-//   window.location.hostname === 'localhost' ? 'http://223.130.128.91' : 'api';
+const host =
+  window.location.hostname === 'localhost' ? 'http://223.130.128.91' : 'api';
 
 /* 변수 추천 API */
 export async function getTranslateWord(word = '') {

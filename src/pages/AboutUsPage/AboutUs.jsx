@@ -14,7 +14,7 @@ export default function AboutUs() {
         </h1>
         <img className={styles.royImg} src={royImg} alt={royImg} />
       </header>
-      <section>
+      <section className={styles.profile}>
         <div className={styles.profileWrapper}>
           <Profile
             profileImg={daheeImg}

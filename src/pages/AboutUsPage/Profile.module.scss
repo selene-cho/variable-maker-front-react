@@ -7,15 +7,19 @@
     overflow: hidden;
     border-radius: 50%;
     width: 100px;
+    height: 100px;
   }
   .introduce {
     @include set-flex-col-center;
     justify-content: center;
-    margin: 0 10px;
+    margin: 0 20px;
+    > p {
+      margin: 3px 0;
+    }
     .sns {
       display: flex;
       align-items: center;
-      margin: 10px 0;
+      margin-top: 10px;
       .icon {
         margin: 0 5px;
         font-size: $lg;
@@ -34,5 +38,36 @@
   }
 }
 .content {
-  margin: 15px 0;
+  margin: 18px 0;
+  font-size: $reg;
+}
+
+@media (max-width: 768px) {
+  .profile {
+    .profileImg {
+      width: 80px;
+      height: 80px;
+    }
+    .introduce {
+      font-size: $sm;
+    }
+  }
+  .content {
+    font-size: $sm;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile {
+    .profileImg {
+      width: 70px;
+      height: 70px;
+    }
+    .introduce {
+      font-size: $xs;
+    }
+  }
+  .content {
+    font-size: $xs;
+  }
 }

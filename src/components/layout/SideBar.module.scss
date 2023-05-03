@@ -48,6 +48,9 @@
     .history {
       padding: 0;
       margin: 0.9375rem 0;
+      ul li {
+        padding: 5px 0;
+      }
     }
     .options {
       align-self: baseline;

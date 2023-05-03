@@ -1,12 +1,12 @@
 [[redirects]]
-  from = "/proxy/*"
-  to = "https://url주소/:splat"
-  status = 200
-  force = true
-  
-[[redirects]]
   from = "/api/*"
   to = "http://223.130.128.91/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/proxy/*"
+  to = "process.env.REACT_APP_SLACK_WEBHOOKS_URL/:splat"
   status = 200
   force = true
 

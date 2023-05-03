@@ -13,10 +13,12 @@ export default function FeedbackModal() {
     try {
       const data = await axios({
         method: 'POST',
-        url: 'https://cors-anywhere.herokuapp.com/' + SLACK_URL,
-        // url: SLACK_URL,
+        // url: 'https://cors-anywhere.herokuapp.com/' + SLACK_URL,
+        url: SLACK_URL,
         headers: {
           'Content-type': 'application/json',
+          Accept: 'application/json',
+          withCredentials: true,
         },
         data: {
           blocks: [

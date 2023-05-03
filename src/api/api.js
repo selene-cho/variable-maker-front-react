@@ -2,18 +2,21 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 
 const host =
-  window.location.hostname === 'localhost' ? 'http://223.130.128.91' : 'api';
+  window.location.hostname === 'localhost'
+    ? 'http://127.0.0.1:8000'
+    : 'http://223.130.128.91';
 console.log(window.location.hostname);
 
 /* 변수 추천 API */
 export async function getTranslateWord(word = '') {
   const query = `word=${word}`;
   const response = await fetch(
-    `http://223.130.128.91/api/v1/variabletranslate/search/?${query}`,
+    `${host}/api/v1/variabletranslate/search/?${query}`,
     {
       headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json',
+        withCredentials: true,
       },
     }
   );
@@ -28,15 +31,13 @@ export async function getTranslateWord(word = '') {
 
 export async function getAbbr(word = '') {
   const query = `word=${word}`;
-  const response = await fetch(
-    `http://223.130.128.91/api/v1/abbr/search/?${query}`,
-    {
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-    }
-  );
+  const response = await fetch(`${host}/api/v1/abbr/search/?${query}`, {
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+      withCredentials: true,
+    },
+  });
   if (!response.ok) {
     throw new Error('약어 추천 데이터를 불러오는데 실패했습니다.');
   }

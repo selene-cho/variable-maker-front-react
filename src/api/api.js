@@ -4,7 +4,7 @@ import Cookies from 'js-cookie';
 const host =
   window.location.hostname === 'localhost'
     ? 'http://127.0.0.1:8000'
-    : 'http://223.130.128.91';
+    : 'http://223.130.129.40 ';
 console.log(window.location.hostname);
 
 /* 변수 추천 API */
@@ -44,7 +44,7 @@ export async function getAbbr(word = '') {
 }
 
 const instance = axios.create({
-  baseURL: 'http://223.130.128.91/api/v1',
+  baseURL: 'http://223.130.129.40/api/v1',
   headers: {
     'Content-Type': 'application/json',
     Accept: 'application/json',

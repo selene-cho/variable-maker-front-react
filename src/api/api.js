@@ -7,7 +7,9 @@ const host =
 /* 변수 추천 API */
 export async function getTranslateWord(word = '') {
   const query = `word=${word}`;
-  const response = await fetch(`/api/v1/variabletranslate/search/?${query}`);
+  const response = await fetch(
+    `${host}/api/v1/variabletranslate/search/?${query}`
+  );
   if (!response.ok) {
     throw new Error('변수 추천 데이터를 불러오는데 실패했습니다.');
   }
@@ -19,7 +21,7 @@ export async function getTranslateWord(word = '') {
 
 export async function getAbbr(word = '') {
   const query = `word=${word}`;
-  const response = await fetch(`/api/v1/abbr/search/?${query}`);
+  const response = await fetch(`${host}/api/v1/abbr/search/?${query}`);
   if (!response.ok) {
     throw new Error('약어 추천 데이터를 불러오는데 실패했습니다.');
   }

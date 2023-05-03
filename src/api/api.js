@@ -5,7 +5,7 @@ import Cookies from 'js-cookie';
 export async function getTranslateWord(word = '') {
   const query = `word=${word}`;
   const response = await fetch(
-    `https://223.130.128.91/api/v1/variabletranslate/search/?${query}`
+    `http://223.130.128.91/api/v1/variabletranslate/search/?${query}`
   );
   if (!response.ok) {
     throw new Error('변수 추천 데이터를 불러오는데 실패했습니다.');
@@ -19,7 +19,7 @@ export async function getTranslateWord(word = '') {
 export async function getAbbr(word = '') {
   const query = `word=${word}`;
   const response = await fetch(
-    `https://223.130.128.91/api/v1/abbr/search/?${query}`
+    `http://223.130.128.91/api/v1/abbr/search/?${query}`
   );
   if (!response.ok) {
     throw new Error('약어 추천 데이터를 불러오는데 실패했습니다.');
@@ -29,7 +29,7 @@ export async function getAbbr(word = '') {
 }
 
 const instance = axios.create({
-  baseURL: 'https://223.130.128.91/api/v1',
+  baseURL: 'http://223.130.128.91/api/v1',
   headers: { withCredentials: true },
 });
 

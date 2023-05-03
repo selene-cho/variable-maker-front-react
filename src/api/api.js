@@ -8,7 +8,13 @@ const host =
 export async function getTranslateWord(word = '') {
   const query = `word=${word}`;
   const response = await fetch(
-    `${host}/api/v1/variabletranslate/search/?${query}`
+    `${host}/api/v1/variabletranslate/search/?${query}`,
+    {
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+    }
   );
   if (!response.ok) {
     throw new Error('변수 추천 데이터를 불러오는데 실패했습니다.');
@@ -21,7 +27,12 @@ export async function getTranslateWord(word = '') {
 
 export async function getAbbr(word = '') {
   const query = `word=${word}`;
-  const response = await fetch(`${host}/api/v1/abbr/search/?${query}`);
+  const response = await fetch(`${host}/api/v1/abbr/search/?${query}`, {
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+    },
+  });
   if (!response.ok) {
     throw new Error('약어 추천 데이터를 불러오는데 실패했습니다.');
   }
@@ -31,7 +42,11 @@ export async function getAbbr(word = '') {
 
 const instance = axios.create({
   baseURL: 'http://223.130.128.91/api/v1',
-  headers: { withCredentials: true },
+  headers: {
+    'Content-Type': 'application/json',
+    Accept: 'application/json',
+    withCredentials: true,
+  },
 });
 
 /* 회원 기본정보 - GET */

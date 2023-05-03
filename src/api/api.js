@@ -4,7 +4,7 @@ import Cookies from 'js-cookie';
 const host =
   window.location.hostname === 'localhost'
     ? 'http://127.0.0.1:8000'
-    : 'http://223.130.129.40 ';
+    : 'http://223.130.129.40';
 console.log(window.location.hostname);
 
 /* 변수 추천 API */

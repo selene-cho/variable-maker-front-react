@@ -11,6 +11,8 @@ import NavToggle from './NavToggle';
 import { useEffect, useState } from 'react';
 import Logo from '../common/Logo';
 import { Link } from 'react-router-dom';
+import AboutUs from '../../pages/AboutUsPage/AboutUs';
+import { BsClipboardHeart } from 'react-icons/bs';
 
 function getLinkStyle({ isActive }) {
   return {
@@ -82,6 +84,10 @@ export default function SideBar({ keywords, onDeleteKeyword, onClearHistory }) {
                 History Reset
               </Button>
               <Feedback />
+              <NavItem link={'/aboutus'} getLinkStyle={getLinkStyle}>
+                <BsClipboardHeart className={styles.icon} />
+                About Us
+              </NavItem>
             </ul>
           </section>
           {/* <section className={styles.login}>

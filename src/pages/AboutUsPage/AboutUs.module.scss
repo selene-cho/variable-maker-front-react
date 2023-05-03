@@ -1,0 +1,69 @@
+@import '../../scss/style.scss';
+
+.container {
+  @include set-wh100;
+  display: flex;
+  flex-direction: column;
+  // padding: 3.75rem 6.25rem 4.375rem;
+  padding: 5%;
+  font-family: $surroundAir;
+  font-size: $reg;
+  color: var(--color-variable-text);
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    .team {
+      @include set-flex-col-center;
+      font-family: $surround;
+      text-align: center;
+      margin: 0 20px;
+      > p {
+        margin-top: 8px;
+        font-size: $sm;
+      }
+    }
+    .royImg {
+      width: 50px;
+    }
+  }
+  .profileWrapper {
+    @include set-flex-col-center;
+    margin: 20px 0;
+    padding: 5px;
+    border: 2px solid var(--color-sidebar-search);
+    border-radius: 10px;
+  }
+  .updateInfo {
+    @include set-flex-col-center;
+    > h1 {
+      margin: 5px 0;
+      font: {
+        family: $surround;
+        size: $md;
+      }
+    }
+    > p {
+      font-size: $sm;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 3.75rem 6.25rem 4.375rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 3.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1.875rem;
+  }
+}

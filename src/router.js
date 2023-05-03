@@ -7,6 +7,7 @@ import Feedback from './pages/FeedbackPage/Feedback';
 import KakaoLogin from './components/auth/KakaoLogin';
 import GoogleLogin from './components/auth/GoogleLogin';
 import Login from './components/auth/Login';
+import AboutUs from './pages/AboutUsPage/AboutUs';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
       { path: 'variable', element: <Variable /> },
       { path: 'abbreviation', element: <Abbr /> },
       { path: 'feedback', element: <Feedback /> },
+      { path: 'aboutus', element: <AboutUs /> },
     ],
   },
   {

@@ -16,7 +16,6 @@ export async function getTranslateWord(word = '') {
       headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json',
-        withCredentials: true,
       },
     }
   );
@@ -35,7 +34,6 @@ export async function getAbbr(word = '') {
     headers: {
       'Content-Type': 'application/json',
       Accept: 'application/json',
-      withCredentials: true,
     },
   });
   if (!response.ok) {

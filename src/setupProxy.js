@@ -4,7 +4,7 @@ module.exports = function (app) {
   app.use(
     createProxyMiddleware('/api', {
       // 백엔드 주소
-      target: 'http://223.130.128.91',
+      target: 'http://223.130.129.40',
       changeOrigin: true,
     })
   );
@@ -14,7 +14,7 @@ module.exports = function (app) {
 // module.exports = (app) => {
 //   app.use(
 //     createProxyMiddleware('/api', {
-//       target: 'http://223.130.128.91',
+//       target: 'http://223.130.129.40',
 //       changeOrigin: true,
 //     })
 //   );

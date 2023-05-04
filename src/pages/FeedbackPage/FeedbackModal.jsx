@@ -14,8 +14,8 @@ export default function FeedbackModal() {
     try {
       const data = await axios({
         method: 'POST',
-        url: 'https://cors-anywhere.herokuapp.com/' + SLACK_URL,
-        // url: SLACK_URL,
+        // url: 'https://cors-anywhere.herokuapp.com/' + SLACK_URL,
+        url: SLACK_URL,
         // url: 'https://proxy.cors.sh/' + SLACK_URL,
         // url: 'https://cors.bridged.cc/' + SLACK_URL,
         headers: {

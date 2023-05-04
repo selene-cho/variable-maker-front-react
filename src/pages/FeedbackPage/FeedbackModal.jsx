@@ -17,7 +17,6 @@ export default function FeedbackModal() {
         // url: SLACK_URL,
         headers: {
           'Content-type': 'application/json',
-          Accept: 'application/json',
           withCredentials: true,
         },
         data: {

@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import styles from "./Abbr.module.scss";
+import { useEffect } from "react";
+import styles from "./AbbrAd.module.scss";
 
 export default function AbbrAd() {
   // 광고 생성 함수
@@ -24,10 +24,10 @@ export default function AbbrAd() {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <div className="variabeAd">
+    <>
+      <div className={styles.abbrAd}>
         <div className="adfitOne"></div>
       </div>
-    </div>
+    </>
   );
 }

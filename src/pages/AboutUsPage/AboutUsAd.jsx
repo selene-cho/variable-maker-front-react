@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import styles from "./AboutUs.module.scss";
+import { useEffect } from "react";
+import styles from "./AboutUsAd.module.scss";
 
 export default function AboutUsAd() {
   // 광고 생성 함수
@@ -12,9 +12,9 @@ export default function AboutUsAd() {
     scr.async = "true";
     scr.type = "text/javascript";
     scr.src = "//t1.daumcdn.net/kas/static/ba.min.js";
-    ins.setAttribute("data-ad-width", "320");
-    ins.setAttribute("data-ad-height", "50");
-    ins.setAttribute("data-ad-unit", "DAN-SpRU2d3kiSJov4mM");
+    ins.setAttribute("data-ad-width", "160");
+    ins.setAttribute("data-ad-height", "600");
+    ins.setAttribute("data-ad-unit", "DAN-nNjs3aJ7PBpLfXOK");
 
     document.querySelector(".adfitOne").appendChild(ins);
     document.querySelector(".adfitOne").appendChild(scr);
@@ -24,10 +24,10 @@ export default function AboutUsAd() {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <div className="aboutUsAd">
+    <>
+      <div className={styles.aboutUsAd}>
         <div className="adfitOne"></div>
       </div>
-    </div>
+    </>
   );
 }

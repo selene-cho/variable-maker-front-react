@@ -7,50 +7,68 @@
   font-family: $surroundAir;
   font-size: $reg;
   color: var(--color-variable-text);
-  header {
+
+  .outercontent {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    .team {
-      @include set-flex-col-center;
-      font-family: $surround;
-      text-align: center;
-      margin: 0 20px;
-      > p {
-        margin-top: 8px;
-        font-size: $sm;
+    justify-content: space-around;
+    .innercontent {
+      header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+
+        .team {
+          @include set-flex-col-center;
+          font-family: $surround;
+          text-align: center;
+          margin: 0 20px;
+
+          > p {
+            margin-top: 8px;
+            font-size: $sm;
+          }
+        }
+
+        .royImg {
+          width: 50px;
+        }
+      }
+
+      .profile {
+        @include set-flex-col-center;
+        margin: 0 auto;
+        width: 80%;
+
+        .profileWrapper {
+          @include set-flex-col-center;
+          @include set-wh100;
+          margin: 20px 0;
+          padding: 5px;
+          border: 2px solid var(--color-sidebar-search);
+          border-radius: 10px;
+        }
+      }
+
+      .updateInfo {
+        @include set-flex-col-center;
+
+        > h1 {
+          margin: 5px 0;
+          font: {
+            family: $surround;
+            size: $md;
+          }
+        }
+
+        > p {
+          font-size: $xs;
+          margin: 3px 0;
+        }
       }
     }
-    .royImg {
-      width: 50px;
-    }
-  }
-  .profile {
-    @include set-flex-col-center;
-    margin: 0 auto;
-    width: 80%;
-    .profileWrapper {
-      @include set-flex-col-center;
-      @include set-wh100;
-      margin: 20px 0;
-      padding: 5px;
-      border: 2px solid var(--color-sidebar-search);
-      border-radius: 10px;
-    }
-  }
-  .updateInfo {
-    @include set-flex-col-center;
-    > h1 {
-      margin: 5px 0;
-      font: {
-        family: $surround;
-        size: $md;
-      }
-    }
-    > p {
-      font-size: $xs;
-      margin: 3px 0;
+    .addcontent {
+
     }
   }
 }
@@ -63,14 +81,20 @@
 
 @media (max-width: 768px) {
   .container {
+    .addcontent {
+      display: none;
+    }
     padding: 1.875rem;
+
     header {
       .team {
         font-size: $xl;
+
         > p {
           font-size: $xs;
         }
       }
+
       .royImg {
         width: 40px;
       }
@@ -81,11 +105,13 @@
 @media (max-width: 480px) {
   .container {
     padding: 1.875rem;
+
     .updateInfo {
       > h1 {
         margin-top: 15px;
         font-size: $reg;
       }
+
       > p {
         font-size: $xxs;
       }

@@ -20,8 +20,7 @@ export default function FeedbackModal() {
         // url: 'https://cors.bridged.cc/' + SLACK_URL,
         headers: {
           'Content-type': 'application/json',
-          // withCredentials: true,
-          // 'x-cors-api-key': 'temp_7bf5ebad29ed057139a9828ecf4810e0',
+          Accept: 'application/json, text/plain, */*',
           // 'x-cors-api-key': CORS_API_KEY,
         },
         data: {
@@ -39,7 +38,7 @@ export default function FeedbackModal() {
             },
           ],
         },
-        withCredentials: true,
+        // withCredentials: true,
       });
       return data;
     } catch (err) {

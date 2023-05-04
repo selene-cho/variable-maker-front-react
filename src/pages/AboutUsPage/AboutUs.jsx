@@ -44,7 +44,7 @@ export default function AboutUs() {
         <p>v1.0.0-alpha</p>
         <p>2023.05.04</p>
       </section>
-      <AboutUsAd></AboutUsAd>
+      {/*<AboutUsAd></AboutUsAd>*/}
     </div>
   );
 }

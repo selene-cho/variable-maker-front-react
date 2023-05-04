@@ -1,20 +1,20 @@
-import { Outlet, useLocation } from 'react-router-dom';
-import SideBar from './components/layout/SideBar';
-import styles from './scss/App.module.scss';
-import { useEffect, useState } from 'react';
+import { Outlet, useLocation } from "react-router-dom";
+import SideBar from "./components/layout/SideBar";
+import styles from "./scss/App.module.scss";
+import { useEffect, useState } from "react";
 
-let currentPath = '';
+let currentPath = "";
 
 export default function App() {
   // map 사용해서 최근 검색기록 나타내기 위해 string -> object 형태로 변환(parsing)
   const [keywords, setKeywords] = useState(
-    JSON.parse(localStorage.getItem('keywords') || '[]')
+    JSON.parse(localStorage.getItem("keywords") || "[]")
   );
 
   // keywords 변할 때만 렌더링
   // 배열(array) -> 문자열(string)로 타입 변환
   useEffect(() => {
-    localStorage.setItem('keywords', JSON.stringify(keywords));
+    localStorage.setItem("keywords", JSON.stringify(keywords));
   }, [keywords]);
 
   // 검색 기록 추가

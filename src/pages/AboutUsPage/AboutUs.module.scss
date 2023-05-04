@@ -10,7 +10,7 @@
 
   .outercontent {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     .innercontent {
       header {
         display: flex;
@@ -68,7 +68,6 @@
       }
     }
     .addcontent {
-
     }
   }
 }
@@ -105,13 +104,11 @@
 @media (max-width: 480px) {
   .container {
     padding: 1.875rem;
-
-    .updateInfo {
+    .outercontent .innercontent .updateInfo {
       > h1 {
         margin-top: 15px;
         font-size: $reg;
       }
-
       > p {
         font-size: $xxs;
       }

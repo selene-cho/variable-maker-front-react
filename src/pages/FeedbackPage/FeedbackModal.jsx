@@ -19,6 +19,7 @@ export default function FeedbackModal() {
         // url: 'https://proxy.cors.sh/' + SLACK_URL,
         // url: 'https://cors.bridged.cc/' + SLACK_URL,
         headers: {
+          'Content-type': 'application/x-www-form-urlencoded',
           // 'Content-type': 'application/json',
           Accept: 'application/json, text/plain, */*',
           // 'x-cors-api-key': CORS_API_KEY,

@@ -3,6 +3,7 @@ import styles from './FeedbackModal.module.scss';
 import axios from 'axios';
 
 const SLACK_URL = process.env.REACT_APP_SLACK_WEBHOOKS_URL;
+const CORS_API_KEY = process.env.REACT_APP_CORS_SH_API_KEY;
 
 export default function FeedbackModal() {
   const [disabled, setDisabled] = useState(false);
@@ -13,11 +14,13 @@ export default function FeedbackModal() {
     try {
       const data = await axios({
         method: 'POST',
-        url: 'https://cors-anywhere.herokuapp.com/' + SLACK_URL,
+        // url: 'https://cors-anywhere.herokuapp.com/' + SLACK_URL,
         // url: SLACK_URL,
+        url: 'https://proxy.cors.sh/' + SLACK_URL,
         headers: {
-          'Content-type': 'application/json',
-          withCredentials: true,
+          // 'Content-type': 'application/json',
+          // withCredentials: true,
+          'x-cors-api-key': CORS_API_KEY,
         },
         data: {
           blocks: [

@@ -10,26 +10,26 @@
 
   .outercontent {
     display: flex;
-    justify-content: space-between;
+    @include set-wh100;
+    justify-content: space-around;
+    align-items: center;
     .innercontent {
+    @include set-wh100;
       header {
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-
         .team {
           @include set-flex-col-center;
           font-family: $surround;
           text-align: center;
           margin: 0 20px;
-
           > p {
             margin-top: 8px;
             font-size: $sm;
           }
         }
-
         .royImg {
           width: 50px;
         }
@@ -43,7 +43,7 @@
         .profileWrapper {
           @include set-flex-col-center;
           @include set-wh100;
-          margin: 20px 0;
+          margin: 10px 0;
           padding: 5px;
           border: 2px solid var(--color-sidebar-search);
           border-radius: 10px;
